@@ -225,11 +225,9 @@ a {
         var(--max-width)
     );
 
-    min-height: calc(100vh - 72px);
-
     margin: auto;
 
-    padding: 90px 0 110px;
+    padding: 80px 0 90px;
 
     display: grid;
 
@@ -239,7 +237,7 @@ a {
 
     align-items: center;
 
-    gap: 80px;
+    gap: 70px;
 
 }
 
