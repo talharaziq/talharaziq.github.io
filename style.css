@@ -1861,3 +1861,251 @@ summary:focus-visible {
 
    }     
      
+/* ==========================================
+
+/* 1. Bold TR logo — remove circular container */
+.logo {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: -0.09em;
+    line-height: 1;
+
+    transition: color 220ms ease, transform 220ms ease;
+}
+
+.logo:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+
+/* 2. Smooth navigation underline */
+.nav-links a {
+    position: relative;
+    transition: color 220ms ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -7px;
+    height: 1px;
+    background: var(--accent);
+    transition: right 220ms ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+    right: 0;
+}
+
+
+/* 3. Refined button interactions */
+.button,
+.publication-link,
+.credential-link,
+.contact-link {
+    transition:
+        color 220ms ease,
+        background-color 220ms ease,
+        border-color 220ms ease,
+        box-shadow 220ms ease,
+        transform 220ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(23, 32, 30, 0.12);
+}
+
+.publication-link:hover,
+.credential-link:hover {
+    transform: translateX(3px);
+}
+
+
+/* 4. Subtle depth for existing cards */
+.research-card,
+.experience-card,
+.projects-placeholder,
+.credential-card,
+.contact-link {
+    transition:
+        transform 260ms ease,
+        box-shadow 260ms ease,
+        border-color 260ms ease;
+}
+
+.research-card:hover {
+    transform:
+        perspective(900px)
+        rotateX(1deg)
+        rotateY(-1deg)
+        translateY(-5px);
+
+    box-shadow: 0 14px 30px rgba(23, 32, 30, 0.09);
+}
+
+.experience-card:hover,
+.credential-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 28px rgba(23, 32, 30, 0.08);
+}
+
+.projects-placeholder:hover {
+    transform: perspective(1000px) translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 32px rgba(23, 32, 30, 0.08);
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 24px rgba(23, 32, 30, 0.07);
+}
+
+
+/* 5. Animated DNA decoration */
+body::before {
+    content: "";
+    position: fixed;
+    z-index: 0;
+    top: 14vh;
+    right: 18px;
+    width: 58px;
+    height: 72vh;
+    min-height: 340px;
+
+    pointer-events: none;
+    opacity: 0.13;
+
+    background-repeat: repeat-y;
+    background-size: 58px 180px;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 180'%3E%3Cg fill='none' stroke='%2332685d' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M18 0 C88 22 88 68 18 90 S-52 158 18 180'/%3E%3Cpath d='M82 0 C12 22 12 68 82 90 S152 158 82 180'/%3E%3Cpath d='M30 12 L70 12 M24 32 L76 32 M18 52 L82 52 M24 72 L76 72 M30 102 L70 102 M24 122 L76 122 M18 142 L82 142 M30 162 L70 162' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E");
+
+    animation: dna-scroll 18s linear infinite;
+}
+
+/* Keep your website content above the decoration */
+.site-header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes dna-scroll {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 180px;
+    }
+}
+
+
+/* 6. Scientific illustrations on research cards */
+.research-card::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 38px;
+    margin-top: 20px;
+
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    opacity: 0.8;
+}
+
+/* DNA illustration */
+.research-card:nth-child(1)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3Cg fill='none' stroke='%2332685d' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M8 3 C54 14 10 34 56 45 M56 3 C10 14 54 34 8 45'/%3E%3Cpath d='M18 8 L46 8 M24 16 L40 16 M24 32 L40 32 M18 40 L46 40' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Molecular network illustration */
+.research-card:nth-child(2)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3Cg fill='none' stroke='%2332685d' stroke-width='1.7'%3E%3Cpath d='M10 24 L25 9 L43 16 L54 34 L34 41 Z M25 9 L34 41 M10 24 L43 16 M25 9 L54 34'/%3E%3C/g%3E%3Cg fill='%23dce9e4' stroke='%2332685d' stroke-width='1.5'%3E%3Ccircle cx='10' cy='24' r='4'/%3E%3Ccircle cx='25' cy='9' r='4'/%3E%3Ccircle cx='43' cy='16' r='4'/%3E%3Ccircle cx='54' cy='34' r='4'/%3E%3Ccircle cx='34' cy='41' r='4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* AI / machine learning network illustration */
+.research-card:nth-child(3)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3Cg fill='none' stroke='%2332685d' stroke-width='1.6'%3E%3Cpath d='M9 24 L23 9 L42 14 L55 29 L38 41 L20 34 Z M23 9 L20 34 M42 14 L38 41 M9 24 L55 29'/%3E%3C/g%3E%3Cg fill='%23dce9e4' stroke='%2332685d' stroke-width='1.5'%3E%3Ccircle cx='9' cy='24' r='4'/%3E%3Ccircle cx='23' cy='9' r='4'/%3E%3Ccircle cx='42' cy='14' r='4'/%3E%3Ccircle cx='55' cy='29' r='4'/%3E%3Ccircle cx='38' cy='41' r='4'/%3E%3Ccircle cx='20' cy='34' r='4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/* 7. Scroll reveal on supported browsers */
+@supports (animation-timeline: view()) {
+    .research-card,
+    .experience-card,
+    .projects-placeholder,
+    .credential-card {
+        animation: portfolio-reveal both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 25%;
+    }
+
+    @keyframes portfolio-reveal {
+        from {
+            opacity: 0.45;
+            translate: 0 18px;
+        }
+
+        to {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+}
+
+
+/* 8. Mobile adjustments */
+@media (max-width: 760px) {
+    body::before {
+        right: 3px;
+        width: 34px;
+        opacity: 0.07;
+    }
+
+    .research-card:hover,
+    .projects-placeholder:hover {
+        transform: translateY(-2px);
+    }
+}
+
+
+/* 9. Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none !important;
+    }
+
+    .logo,
+    .button,
+    .research-card,
+    .experience-card,
+    .projects-placeholder,
+    .credential-card,
+    .contact-link,
+    .nav-links a,
+    .publication-link,
+    .credential-link {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}
