@@ -1,432 +1,198 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#020503">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#f5f1eb">
+  <meta name="color-scheme" content="light dark">
+  <meta name="google-site-verification" content="3p7_v4r6FUq01RGsQReCgfqVIZ0K1dKJLRt2dojPBKI">
   <meta name="author" content="Talha Raziq">
-  <meta name="keywords" content="Talha Raziq, biotechnology, bioinformatics, computational biology, genomics, biological data analysis, machine learning, Python, single-cell RNA-seq, antimicrobial resistance">
-  <meta name="description" content="Talha Raziq is a biotechnology graduate exploring bioinformatics, computational biology, genomics, biological data analysis, and machine learning through research projects and publication.">
+  <meta name="description" content="Talha Raziq — biotechnology graduate, data scientist and web developer. Founder of OopsGene, PawpawDecors and Mravenzo.">
+  <meta name="keywords" content="Talha Raziq, web development, website management, data science, biotechnology, bioinformatics, graphic design, WhatsApp automation">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://talharaziq.github.io/">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-
-  <meta property="og:type" content="profile">
-  <meta property="og:site_name" content="Talha Raziq">
-  <meta property="og:title" content="Talha Raziq | Bioinformatics & Computational Biology">
-  <meta property="og:description" content="Biotechnology, bioinformatics, computational biology, genomics, and machine learning projects by Talha Raziq.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Talha Raziq — Digital Projects & Data">
+  <meta property="og:description" content="Websites, digital experiences, automation and data projects by Talha Raziq.">
   <meta property="og:url" content="https://talharaziq.github.io/">
-  <meta property="og:image" content="https://talharaziq.github.io/assets/og-cover.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Talha Raziq | Bioinformatics & Computational Biology">
-  <meta name="twitter:description" content="Research projects and work at the intersection of biology and computation.">
-  <meta name="twitter:image" content="https://talharaziq.github.io/assets/og-cover.png">
+  <meta name="twitter:title" content="Talha Raziq — Digital Projects & Data">
+  <meta name="twitter:description" content="Websites, digital experiences, automation and data projects by Talha Raziq.">
+  <title>Talha Raziq — Digital Projects & Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#f5f1eb; --paper:#fffdfa; --ink:#191714; --muted:#77716a; --line:#e7e0d8;
+      --orange:#ed5a19; --orange-deep:#d94910; --orange-light:#ff7938; --cream:#fbf7f1;
+      --navy:#1b2028; --green:#5f755d; --shadow:0 22px 60px rgba(49,34,21,.10);
+      --sans:'DM Sans',Arial,sans-serif; --display:'Bebas Neue',Impact,sans-serif;
+      --serif:'Playfair Display',Georgia,serif; --urdu:'Noto Nastaliq Urdu',serif;
+      --max:1240px;
+    }
+    html[data-theme="dark"] {
+      color-scheme:dark; --bg:#171714; --paper:#201f1b; --ink:#f6f0e8; --muted:#b3a99e;
+      --line:#38332d; --cream:#24221e; --navy:#111318; --shadow:0 22px 60px rgba(0,0,0,.32);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:30px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+    a{color:inherit;text-decoration:none} button{font:inherit} img{max-width:100%;display:block}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+    ::selection{background:var(--orange);color:#fff}
+    .wrap{width:min(var(--max),calc(100% - 64px));margin-inline:auto}
+    .site-head{height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand-urdu{font-family:var(--urdu);font-size:27px;line-height:1.5;color:var(--orange);padding-top:3px}
+    .brand-sub{font-size:9px;letter-spacing:.18em;font-weight:800;text-transform:uppercase;color:var(--muted)}
+    .nav{display:flex;align-items:center;gap:30px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+    .nav a{transition:color .2s}.nav a:hover{color:var(--orange)}
+    .header-actions{display:flex;align-items:center;gap:12px}
+    .theme-toggle{width:37px;height:37px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--ink);cursor:pointer;transition:transform .2s,border .2s}
+    .theme-toggle:hover{transform:rotate(15deg);border-color:var(--orange)}.theme-toggle svg{width:16px;height:16px}
+    .header-contact{padding:11px 17px;background:var(--ink);color:var(--bg);border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,background .2s}
+    .header-contact:hover{transform:translateY(-2px);background:var(--orange)}
 
-  <title>Talha Raziq | Biotechnology, Bioinformatics & Computational Biology</title>
-  <link rel="stylesheet" href="style.css">
+    /* Hero: split editorial composition inspired by the supplied reference. */
+    .hero-frame{position:relative;min-height:700px;height:min(770px,calc(100svh - 104px));max-height:800px;overflow:hidden;border-radius:24px;background:var(--paper);box-shadow:var(--shadow);isolation:isolate}
+    .hero-orange{position:absolute;inset:0 43% 0 0;background:radial-gradient(circle at 26% 28%,rgba(255,181,108,.30),transparent 34%),linear-gradient(132deg,var(--orange-light),var(--orange) 54%,var(--orange-deep));overflow:hidden}
+    .hero-orange:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;border:1px solid rgba(255,255,255,.10);left:-210px;top:36px;box-shadow:0 0 0 48px rgba(255,255,255,.035),0 0 0 100px rgba(255,255,255,.025)}
+    .hero-white{position:absolute;inset:0 0 0 57%;background:var(--cream)}
+    .hero-grain{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+    .hero-word{position:absolute;z-index:2;left:4.5%;top:31%;width:58%;font-family:var(--display);font-size:clamp(110px,17vw,245px);line-height:.76;letter-spacing:-.025em;color:#fff;white-space:nowrap;pointer-events:none}
+    .hero-word span{display:block}.hero-word .second{font-size:.70em;margin-top:13px;letter-spacing:.015em}
+    .hero-portrait{position:absolute;z-index:4;bottom:-2.4%;left:49.5%;height:103%;width:auto;max-width:none;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 18px 25px rgba(52,25,14,.18));transform:translateX(-50%);pointer-events:none}
+    .hero-topline{position:absolute;z-index:5;top:32px;left:4.2%;right:4.2%;display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+    .hero-name{font-family:var(--urdu);font-size:clamp(32px,4.2vw,58px);line-height:1.55;color:#fff;text-shadow:0 3px 18px rgba(104,32,7,.12);direction:rtl}
+    .hero-index{margin-top:13px;font:9px var(--sans);font-weight:700;letter-spacing:.20em;color:rgba(255,255,255,.72);text-transform:uppercase}
+    .hero-index span{display:block;margin-top:7px;font:10px var(--sans);letter-spacing:.06em;text-transform:none;color:rgba(255,255,255,.88)}
+    .hero-right-copy{position:absolute;z-index:5;top:29%;right:5.2%;width:24%;max-width:245px}
+    .availability{font:9px var(--sans);font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:8px}
+    .availability:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(95,117,93,.13)}
+    .hero-right-copy h1{font-size:clamp(30px,4.4vw,58px);line-height:.98;letter-spacing:-.07em;margin:19px 0 14px;font-weight:800}
+    .hero-right-copy h1 em{font-family:var(--serif);font-weight:500;color:var(--orange);letter-spacing:-.055em}
+    .hero-right-copy p{font-size:12px;line-height:1.85;color:var(--muted);margin:0;max-width:235px}
+    .hero-cta{display:inline-flex;align-items:center;gap:18px;margin-top:24px;padding:12px 15px;border-radius:99px;background:var(--orange);color:#fff;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 10px 23px rgba(237,90,25,.22);transition:transform .2s,box-shadow .2s}
+    .hero-cta:hover{transform:translateY(-3px);box-shadow:0 15px 28px rgba(237,90,25,.30)}
+    .hero-cta b{font-size:16px;font-weight:400;line-height:10px}
+    .hero-foot{position:absolute;z-index:6;left:4.2%;right:4.2%;bottom:28px;display:flex;justify-content:space-between;align-items:flex-end;gap:25px}
+    .hero-caption{max-width:300px;color:rgba(255,255,255,.83);font-size:10px;line-height:1.7}
+    .hero-caption strong{display:block;color:#fff;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+    .hero-social{display:flex;gap:8px;align-items:center}
+    .hero-social a{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;color:var(--ink);background:rgba(255,253,250,.85);transition:transform .2s,background .2s,color .2s}
+    .hero-social a:hover{transform:translateY(-5px);background:var(--orange);color:white}.hero-social svg{width:14px;height:14px}
+    .hero-scroll{position:absolute;z-index:6;bottom:31px;right:4.2%;font:8px var(--sans);font-weight:700;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;writing-mode:vertical-rl}
+
+    .section{padding:112px 0 0}.section-kicker{font-size:9px;color:var(--orange);letter-spacing:.2em;text-transform:uppercase;font-weight:800;margin:0 0 16px}
+    .section-title{font-size:clamp(40px,6vw,78px);line-height:.91;letter-spacing:-.075em;font-weight:800;margin:0}.section-title em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--orange);letter-spacing:-.05em}
+    .section-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:34px}.section-intro p:last-child{max-width:360px;margin:0 0 4px;color:var(--muted);font-size:12px;line-height:1.9}
+
+    .websites{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .site-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;min-width:0;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .2s}
+    .site-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:transparent}
+    .site-visual{height:205px;padding:16px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .site-visual.oops{background:#dbe5ef}.site-visual.paw{background:#e8e8dc}.site-visual.mravenzo{background:#dce2ee}
+    .browser{width:100%;height:100%;border-radius:10px;background:#fff;box-shadow:0 12px 25px rgba(20,24,28,.12);overflow:hidden;color:#20242a;transition:transform .4s}
+    .site-card:hover .browser{transform:scale(1.035) rotate(-.5deg)}
+    .browser-top{height:19px;background:#f8f8f7;border-bottom:1px solid #ecece9;display:flex;align-items:center;padding:0 8px;gap:4px}
+    .browser-top i{width:5px;height:5px;border-radius:50%;background:#d3d3cf}.browser-url{height:7px;width:34%;margin-left:auto;background:#ededeb;border-radius:6px}
+    .mock-oops{padding:13px 13px}.mock-brand{font-size:8px;font-weight:800;letter-spacing:.15em}.mock-oops-head{display:grid;grid-template-columns:1.1fr .9fr;gap:8px;margin-top:15px;align-items:center}.mock-oops h3{font:25px/.96 Georgia,serif;letter-spacing:-.05em;margin:0;color:#1e2f47}.mock-oops p{font-size:7px;line-height:1.5;color:#738095;margin:7px 0}.mock-button{display:inline-block;background:#253f5f;color:#fff;padding:5px 7px;border-radius:20px;font-size:6px}.mock-paper{height:67px;border-radius:8px;background:#dce5f0;padding:12px;display:grid;gap:6px}.mock-paper i{height:4px;border-radius:4px;background:#9eafc3}.mock-paper i:nth-child(2){width:80%}.mock-paper i:nth-child(3){width:60%}
+    .mock-paw{height:calc(100% - 19px);padding:16px;position:relative;background:linear-gradient(110deg,#faf8ef 0 57%,#e1e8dc 57%)}.mock-paw .mock-brand{color:#647b5c}.mock-paw h3{position:relative;z-index:2;margin:20px 0 0;font:28px/.9 Georgia,serif;color:#42513f;letter-spacing:-.05em}.mock-paw p{position:relative;z-index:2;max-width:130px;font-size:7px;color:#778171;line-height:1.5}.plant{position:absolute;right:3px;bottom:-8px;width:115px;height:145px}.plant:before{content:"";position:absolute;width:2px;height:125px;left:58px;bottom:0;background:#6d876b;transform:rotate(7deg)}.plant i{position:absolute;width:35px;height:60px;border-radius:100% 0 100% 0;background:#879e7b;transform:rotate(-25deg)}.plant i:nth-child(1){left:14px;top:34px}.plant i:nth-child(2){left:47px;top:7px;transform:rotate(30deg);background:#6e8a6d}.plant i:nth-child(3){left:60px;top:65px;transform:rotate(45deg);background:#a8b69a}.plant i:nth-child(4){left:22px;top:83px;transform:rotate(-45deg);background:#9cab8b}
+    .mock-tools{height:calc(100% - 19px);padding:11px 13px;background:#f5f7fa}.mock-tools .mock-brand{color:#203a5a}.calcbox{width:75%;margin:12px auto 0;padding:8px;border:1px solid #dce3ed;border-radius:8px;background:white;box-shadow:0 5px 13px rgba(20,40,60,.08)}.calc-value{text-align:right;background:#eef2f7;padding:7px;border-radius:4px;font:17px monospace;color:#24415e}.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:6px}.calc-grid i{height:11px;border-radius:3px;background:#edf0f4}.calc-grid i:nth-child(4n){background:#d9e4f0}
+    .site-copy{padding:20px 20px 18px}.site-category{font-size:8px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;font-weight:800}.site-copy h3{font-size:25px;letter-spacing:-.06em;margin:9px 0 2px}.domain{font-size:10px;color:var(--orange);font-weight:700}.site-copy p{min-height:52px;font-size:11px;line-height:1.75;color:var(--muted);margin:12px 0 16px}.site-link{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:13px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.site-link span{font-size:17px;color:var(--orange);transition:transform .2s}.site-card:hover .site-link span{transform:translate(4px,-3px)}
+
+    .services{display:grid;grid-template-columns:1fr 1fr;gap:14px}.service{display:flex;align-items:center;gap:19px;padding:22px 23px;background:var(--paper);border:1px solid var(--line);border-radius:17px;transition:background .25s,border .25s,transform .25s}.service:hover{background:var(--cream);border-color:var(--orange);transform:translateY(-4px)}.service-no{font:26px var(--display);color:var(--orange);width:28px}.service-text h3{font-size:16px;margin:0 0 3px;letter-spacing:-.03em}.service-text p{margin:0;color:var(--muted);font-size:10px;line-height:1.65}
+
+    .projects{display:grid;grid-template-columns:1.2fr .8fr;gap:15px}.project{border-radius:19px;background:var(--navy);color:#fff;padding:25px;min-height:230px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}.project:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.project:first-child{grid-row:span 2;min-height:475px;background:linear-gradient(145deg,#202a3b,#121923)}.project:after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(255,255,255,.10);border-radius:50%;right:-80px;top:-80px;box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.02)}.project-label{font:8px var(--sans);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ff9a6b}.project h3{position:relative;z-index:1;font-size:25px;max-width:480px;line-height:1.1;letter-spacing:-.05em;margin:22px 0 9px}.project p{position:relative;z-index:1;max-width:480px;color:rgba(255,255,255,.67);font-size:11px;line-height:1.8;margin:0}.project-meta{position:absolute;z-index:2;bottom:22px;left:25px;right:25px;display:flex;align-items:center;justify-content:space-between;gap:12px}.project-tags{display:flex;flex-wrap:wrap;gap:6px}.project-tags span{padding:5px 8px;border:1px solid rgba(255,255,255,.18);border-radius:50px;color:rgba(255,255,255,.78);font:8px var(--sans)}.project-meta a{font-size:10px;font-weight:800;color:#fff}.project-meta a:hover{color:#ff9a6b}.project-stat{margin-top:25px;display:flex;gap:20px;position:relative;z-index:1}.project-stat strong{display:block;font-size:23px;letter-spacing:-.04em}.project-stat small{display:block;color:rgba(255,255,255,.5);font:8px var(--sans);letter-spacing:.12em;text-transform:uppercase}
+
+    .science-band{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--paper)}.science-band h3{font-size:26px;line-height:1.05;letter-spacing:-.055em;margin:0 0 12px}.science-band p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}.science-points{display:grid;gap:12px}.science-point{display:flex;justify-content:space-between;gap:18px;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:10px}.science-point span{color:var(--muted);text-align:right}
+    .publication{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:22px 25px;border-radius:18px;background:#f4e8dc;border:1px solid #ead7c7;color:#282018}.pub-label{font:8px var(--sans);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ad552f}.publication h3{font:19px/1.25 var(--serif);max-width:650px;margin:7px 0}.publication p{font-size:10px;color:#77675c;margin:0}.pub-link{flex:none;padding:11px 14px;background:#29231f;color:#fff;border-radius:99px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;transition:background .2s}.pub-link:hover{background:var(--orange)}
+    .contact{margin:110px 0 50px;padding:34px 35px;border-radius:22px;background:var(--orange);color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;position:relative;overflow:hidden}.contact:after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.2);border-radius:50%;right:16%;top:-220px;box-shadow:0 0 0 40px rgba(255,255,255,.05),0 0 0 80px rgba(255,255,255,.04)}.contact h2{font:clamp(34px,5vw,60px)/.9 var(--display);margin:0;letter-spacing:.01em}.contact p{position:relative;z-index:1;color:rgba(255,255,255,.8);font-size:11px;max-width:380px}.contact a{position:relative;z-index:1;flex:none;padding:14px 19px;border-radius:99px;background:#fff;color:#222;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s}.contact a:hover{transform:translateY(-3px)}
+    footer{padding:0 0 28px;display:flex;align-items:center;justify-content:space-between;gap:15px;color:var(--muted);font-size:9px;letter-spacing:.08em;text-transform:uppercase}.footer-urdu{font-family:var(--urdu);font-size:18px;color:var(--orange)}.footer-social{display:flex;gap:12px}.footer-social a:hover{color:var(--orange)}
+    @media(max-width:900px){.hero-frame{min-height:640px;height:690px}.hero-orange{right:38%}.hero-white{left:62%}.hero-word{top:33%;font-size:clamp(110px,18vw,190px);left:4%}.hero-portrait{height:90%;left:50%}.hero-right-copy{right:3.2%;width:25%;top:30%}.hero-right-copy h1{font-size:36px}.websites{grid-template-columns:1fr 1fr}.site-card:last-child{grid-column:span 2;display:grid;grid-template-columns:.9fr 1.1fr}.site-card:last-child .site-visual{height:auto;min-height:200px}.projects{grid-template-columns:1fr 1fr}.project:first-child{grid-row:auto;grid-column:span 2;min-height:330px}}
+    @media(max-width:640px){.wrap{width:calc(100% - 30px)}.site-head{height:70px}.brand-urdu{font-size:23px}.brand-sub{font-size:8px}.nav{display:none}.header-contact{padding:10px 13px;font-size:9px}.hero-frame{height:720px;min-height:0;border-radius:17px}.hero-orange{inset:0 0 38% 0}.hero-white{inset:62% 0 0 0}.hero-topline{top:18px;left:20px;right:20px}.hero-name{font-size:40px}.hero-index{font-size:8px;margin-top:8px}.hero-word{left:5%;top:23%;font-size:clamp(110px,34vw,164px);line-height:.74;width:90%}.hero-word .second{font-size:.67em;margin-top:8px}.hero-portrait{height:66%;max-height:520px;left:51%;bottom:33%;transform:translateX(-50%);z-index:4}.hero-right-copy{top:auto;right:6%;bottom:62px;width:53%;max-width:235px}.availability{font-size:7px}.hero-right-copy h1{font-size:30px;margin:10px 0 7px}.hero-right-copy p{font-size:9px;line-height:1.55}.hero-cta{margin-top:12px;padding:9px 12px;font-size:8px}.hero-foot{bottom:15px;left:19px;right:19px}.hero-caption{font-size:8px;max-width:42%;color:var(--muted)}.hero-caption strong{color:var(--ink);font-size:9px}.hero-social{gap:5px}.hero-social a{width:26px;height:26px}.hero-social svg{width:12px;height:12px}.hero-scroll{display:none}.section{padding-top:77px}.section-intro{display:block}.section-title{font-size:clamp(42px,12vw,62px)}.section-intro p:last-child{margin-top:14px;font-size:11px}.websites{grid-template-columns:1fr;gap:12px}.site-card:last-child{grid-column:auto;display:block}.site-card:last-child .site-visual{height:190px;min-height:0}.site-visual{height:190px}.site-copy p{min-height:0}.services{grid-template-columns:1fr;gap:9px}.service{padding:17px}.projects{grid-template-columns:1fr}.project:first-child{grid-column:auto;min-height:395px}.project{min-height:270px;padding:21px}.project h3{font-size:22px}.project-meta{left:21px;right:21px;bottom:19px;align-items:flex-end}.project-stat{gap:16px}.project-stat strong{font-size:19px}.science-band{grid-template-columns:1fr;gap:20px;padding:20px}.publication{display:block;padding:20px}.pub-link{display:inline-block;margin-top:16px}.contact{margin:75px 0 35px;padding:25px 21px;display:block}.contact p{max-width:100%;font-size:10px}.contact a{display:inline-block;margin-top:8px}footer{flex-wrap:wrap;font-size:8px}.footer-social{width:100%;order:3}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+  </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Talha Raziq",
-    "url": "https://talharaziq.github.io/",
-    "image": "https://talharaziq.github.io/assets/profile.jpg",
-    "jobTitle": "Biotechnology Graduate",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Gomal University",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dera Ismail Khan",
-        "addressCountry": "PK"
-      }
-    },
-    "email": "mailto:talha47raziq@gmail.com",
-    "sameAs": [
-      "https://github.com/talharaziq",
-      "https://pk.linkedin.com/in/talharaziq",
-      "https://scholar.google.com/citations?user=6vRb9FUAAAAJ&hl=en"
-    ],
-    "knowsAbout": [
-      "Biotechnology",
-      "Bioinformatics",
-      "Computational Biology",
-      "Genomics",
-      "Biological Data Analysis",
-      "Machine Learning"
-    ]
-  }
+  {"@context":"https://schema.org","@type":"Person","name":"Talha Raziq","url":"https://talharaziq.github.io/","jobTitle":["Biotechnology Graduate","Data Scientist","Web Developer","Website Manager"],"email":"mailto:talharaziq@outlook.com","alumniOf":{"@type":"CollegeOrUniversity","name":"Gomal University"},"sameAs":["https://www.linkedin.com/in/talharaziq","https://x.com/talha_raziq","https://www.instagram.com/raayzik/","https://github.com/talharaziq"],"knowsAbout":["Website development","Website management","Graphic design","WhatsApp automation","Python","Data analysis","Biotechnology","Bioinformatics"]}
   </script>
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="background-grid" aria-hidden="true"></div>
-  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-
-  <header class="site-header" id="site-header">
-    <nav class="nav-shell" aria-label="Main navigation">
-      <a class="brand-mark" href="#home" aria-label="Talha Raziq, home">
-        <span class="brand-glyph">T<span>R</span></span>
-        <span class="brand-label">TALHA<span>RAZIQ</span><small>PERSONAL PORTFOLIO</small></span>
-      </a>
-
-      <div class="desktop-nav" id="desktop-nav">
-        <a class="nav-link is-active" href="#home" aria-current="page"><span>00</span>Home</a>
-        <a class="nav-link" href="#about"><span>01</span>About</a>
-        <a class="nav-link" href="#research"><span>02</span>Research</a>
-        <a class="nav-link" href="#experience"><span>03</span>Experience</a>
-        <a class="nav-link" href="#projects"><span>04</span>Projects</a>
-        <a class="nav-link" href="#publication"><span>05</span>Publication</a>
-        <a class="nav-link" href="#skills"><span>06</span>Skills</a>
-        <a class="nav-link" href="#credentials"><span>07</span>Credentials</a>
-        <a class="nav-link" href="#education"><span>08</span>Education</a>
-      </div>
-
-      <div class="nav-actions">
-        <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Enable interface sounds">
-          <span class="sound-icon" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="sound-label">SOUND OFF</span>
-        </button>
-        <a class="nav-contact" href="#contact">LET'S CONNECT <span aria-hidden="true">↗</span></a>
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-    <div class="mobile-menu" id="mobile-menu" hidden>
-      <a href="#home"><span>00</span> Home</a>
-      <a href="#about"><span>01</span> About</a>
-      <a href="#research"><span>02</span> Research</a>
-      <a href="#experience"><span>03</span> Experience</a>
-      <a href="#projects"><span>04</span> Projects</a>
-      <a href="#publication"><span>05</span> Publication</a>
-      <a href="#credentials"><span>06</span> Credentials</a>
-      <a href="#contact"><span>07</span> Contact</a>
+<body id="top">
+  <header class="site-head wrap">
+    <a class="brand" href="#top" aria-label="Talha home"><span class="brand-urdu" lang="ur">طلحہ</span><span class="brand-sub">Personal portfolio</span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      </button>
+      <a class="header-contact" href="mailto:talharaziq@outlook.com">Let's talk ↗</a>
     </div>
   </header>
 
-  <main id="main-content">
-    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
-      <div class="hero-topline mono"><span><i class="live-dot"></i> PORTFOLIO / PROFILE NODE</span><span>BIOSIGNAL_01 <b>—</b> PK</span></div>
-      <div class="hero-layout">
-        <div class="hero-copy">
-          <p class="eyebrow mono"><span class="eyebrow-bracket">[</span> BIOTECHNOLOGY <b>×</b> COMPUTATION <span class="eyebrow-bracket">]</span></p>
-          <h1 id="hero-title" class="hero-name" aria-label="Talha Raziq"><span class="name-first">Talha</span><span class="name-second">Razi</span><span class="letter-q" aria-hidden="true">Q</span><span class="name-cursor" aria-hidden="true">_</span></h1>
-          <p class="hero-role mono"><span class="role-prefix">&gt;</span> BIOINFORMATICS <i>·</i> COMPUTATIONAL BIOLOGY <i>·</i> AI / ML</p>
-          <p class="hero-summary">A biotechnology graduate building toward computational approaches to biological questions — connecting biological systems, data analysis, and code.</p>
-          <div class="hero-cta-row">
-            <a class="button button-primary" href="#projects"><span>EXPLORE PROJECTS</span><b aria-hidden="true">↘</b></a>
-            <a class="button button-secondary" href="#publication"><span>VIEW PUBLICATION</span><b aria-hidden="true">↗</b></a>
-          </div>
-          <div class="hero-terminal" aria-label="Areas of interest">
-            <div class="terminal-head mono"><span><i></i><i></i><i></i> FIELD_NOTES.TXT</span><span>READ_ONLY</span></div>
-            <div class="terminal-content mono">
-              <span class="terminal-prompt">talha@research:~$</span> <span class="terminal-command">cat focus.txt</span>
-              <div class="terminal-output"><span>01</span> Genomics &amp; sequence analysis</div>
-              <div class="terminal-output"><span>02</span> Structural bioinformatics</div>
-              <div class="terminal-output"><span>03</span> Biological data &amp; machine learning</div>
-            </div>
-          </div>
-          <div class="hero-microline mono"><span>SCROLL TO EXPLORE</span><span class="scroll-arrow" aria-hidden="true">↓</span><span>01 / 09</span></div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="visual-top mono"><span>SUBJECT_IMAGE // 001</span><span class="visual-state"><i></i> SCAN SEQUENCE READY</span></div>
-          <div class="portrait-stage" id="portrait-stage">
-            <div class="portrait-halo halo-a" aria-hidden="true"></div>
-            <div class="portrait-halo halo-b" aria-hidden="true"></div>
-            <div class="portrait-frame">
-              <div class="portrait-image-wrap">
-                <img class="profile-image" id="profile-image" src="assets/profile.jpg" alt="Portrait of Talha Raziq" fetchpriority="high" decoding="async" loading="eager">
-                <div class="portrait-fallback" aria-hidden="true"><span>TR</span></div>
-                <canvas class="scan-digits" id="scan-digits" aria-hidden="true"></canvas>
-                <div class="image-scan-tint" aria-hidden="true"></div>
-                <div class="scan-beam" aria-hidden="true"><span></span></div>
-                <div class="scan-crosshair" aria-hidden="true"><i></i><i></i></div>
-                <span class="scan-corner corner-tl" aria-hidden="true"></span><span class="scan-corner corner-tr" aria-hidden="true"></span>
-                <span class="scan-corner corner-bl" aria-hidden="true"></span><span class="scan-corner corner-br" aria-hidden="true"></span>
-                <div class="scan-coordinates mono" aria-hidden="true"><span>X: 00.741</span><span>Y: 01.092</span></div>
-                <div class="scan-readout mono" id="scan-readout" aria-live="polite"><span class="readout-spinner"></span><span id="scan-status-text">INITIALIZING VISUAL SCAN</span><b id="scan-timer">05.0</b></div>
-                <div class="approved-stamp mono" id="approved-stamp" aria-live="polite"><span class="approved-check">✓</span><span>APPROVED</span><small>IDENTITY SCAN COMPLETE</small></div>
-              </div>
-              <div class="portrait-side-label mono" aria-hidden="true">TR / 01</div>
-            </div>
-            <div class="orbit orbit-one" aria-hidden="true"><i></i></div>
-            <div class="orbit orbit-two" aria-hidden="true"><i></i></div>
-            <span class="orbit-marker marker-a" aria-hidden="true"></span><span class="orbit-marker marker-b" aria-hidden="true"></span>
-            <div class="visual-sticker mono"><span class="sticker-dot"></span> BIOLOGICAL DATA / HUMAN INSIGHT</div>
-            <span class="visual-index mono">FIG_001 <b>—</b> PROFILE SIGNAL</span>
-          </div>
-          <div class="visual-bottom mono"><span>IMAGE ANALYSIS</span><span id="scan-duration-label">5.0 SEC SEQUENCE</span><span>STATUS: <b id="scan-final-state">PENDING</b></span></div>
+  <main>
+    <section class="hero-frame wrap" aria-label="Talha Raziq portfolio introduction">
+      <div class="hero-orange"></div><div class="hero-white"></div><div class="hero-grain"></div>
+      <div class="hero-topline"><div><div class="hero-name" lang="ur" dir="rtl">طلحہ</div><div class="hero-index">TALHA RAZIQ <span>Independent digital creator</span></div></div><div class="hero-index" style="text-align:right">WEB · DATA · DESIGN<br><span>LAHORE / PAKISTAN</span></div></div>
+      <div class="hero-word" aria-hidden="true"><span>CREATE</span><span class="second">DIGITAL</span></div>
+      <img class="hero-portrait" src="assets/talha-portrait.webp" alt="Stylised illustrated portrait of Talha Raziq" fetchpriority="high">
+      <div class="hero-right-copy"><div class="availability">Available for select projects</div><h1>Ideas into<br><em>real things.</em></h1><p>Websites, digital design and automations — with a data-minded approach and a biotechnology background.</p><a class="hero-cta" href="#work">Explore selected work <b>↗</b></a></div>
+      <div class="hero-foot"><div class="hero-caption"><strong>Talha Raziq</strong>Web developer · Website manager · Data scientist</div>
+        <div class="hero-social" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/talharaziq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V8.99h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V8.99h3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+          <a href="mailto:talharaziq@outlook.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a>
+          <a href="https://x.com/talha_raziq" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 23.22h-7.59l-5.8-7.58-6.63 7.58H.3l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.79h2.04L6.19 3.3H4.01L17.61 20.94Z"/></svg></a>
+          <a href="https://www.instagram.com/raayzik/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="18" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://github.com/talharaziq" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.06c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.61 1.21 3.25.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3.01 0 4.29-2.61 5.23-5.1 5.5.4.35.75 1.03.75 2.08V22c0 .29.2.63.76.52A11.1 11.1 0 0 0 12 .9Z"/></svg></a>
         </div>
       </div>
-      <div class="hero-bottom-rule"><span></span><small class="mono">SCROLL DOWN TO INITIALIZE</small><span></span></div>
+      <div class="hero-scroll">Scroll to explore ↓</div>
     </section>
 
-    <section class="section-wrap about-section" id="about" aria-labelledby="about-heading">
-      <div class="section-kicker mono reveal"><span>01 <b>/</b> ABOUT</span><i></i><small>BACKGROUND &amp; DIRECTION</small></div>
-      <div class="about-layout">
-        <div class="about-heading-block reveal">
-          <p class="micro-label mono">ORIGIN / OBJECTIVE</p>
-          <h2 class="display-title" id="about-heading">BIOLOGY<br><span>IS THE</span><br>LANGUAGE.<br><em>DATA IS</em><br><em>THE LENS.</em></h2>
-          <div class="heading-index mono"><span>FIG. 02</span><span>FOUNDATION_01</span></div>
-        </div>
-        <div class="about-content reveal">
-          <div class="about-terminal mono"><span class="terminal-prompt">&gt; whoami</span><span class="terminal-response">Talha Raziq — Biotechnology Graduate</span></div>
-          <p class="about-lead">I am a Biotechnology graduate from <strong>Gomal University, Dera Ismail Khan</strong>, with an academic foundation in biological sciences and a growing focus on computational approaches to biology.</p>
-          <p>My interests sit at the intersection of <strong>bioinformatics, computational biology, biological data analysis, and artificial intelligence / machine learning</strong>. I am developing practical skills in programming, statistics, data analysis, Linux-based workflows, and biological sequence analysis through research-oriented computational projects.</p>
-          <div class="about-focus-grid">
-            <div class="focus-cell"><span class="focus-icon icon-helix" aria-hidden="true"></span><small class="mono">FOUNDATION</small><strong>Biotechnology</strong></div>
-            <div class="focus-cell"><span class="focus-icon icon-code" aria-hidden="true">&lt;/&gt;</span><small class="mono">METHOD</small><strong>Computational analysis</strong></div>
-            <div class="focus-cell"><span class="focus-icon icon-signal" aria-hidden="true"></span><small class="mono">DIRECTION</small><strong>Bioinformatics</strong></div>
-          </div>
-          <div class="about-footnote mono"><span>MISSION_LOG</span><p>Turning biological data into interpretable results.</p></div>
-        </div>
+    <section class="section wrap" id="work">
+      <div class="section-intro"><div><p class="section-kicker">01 / DIGITAL VENTURES</p><h2 class="section-title">Things I <em>put online.</em></h2></div><p>Three independent websites I founded, built and continue to manage — each with its own audience and purpose.</p></div>
+      <div class="websites">
+        <article class="site-card"><div class="site-visual oops"><div class="browser"><div class="browser-top"><i></i><i></i><i></i><span class="browser-url"></span></div><div class="mock-oops"><div class="mock-brand">OOPSGENE</div><div class="mock-oops-head"><div><h3>Useful information.<br>Clearly explained.</h3><p>Scholarships, student guides and practical resources.</p><span class="mock-button">EXPLORE RESOURCES ↗</span></div><div class="mock-paper"><i></i><i></i><i></i></div></div></div></div></div><div class="site-copy"><div class="site-category">Education · Founder</div><h3>OopsGene</h3><a class="domain" href="https://oopsgene.com" target="_blank" rel="noopener noreferrer">oopsgene.com ↗</a><p>Scholarships, student guides, opportunities and useful learning resources.</p><a class="site-link" href="https://oopsgene.com" target="_blank" rel="noopener noreferrer">Visit website <span>↗</span></a></div></article>
+        <article class="site-card"><div class="site-visual paw"><div class="browser"><div class="browser-top"><i></i><i></i><i></i><span class="browser-url"></span></div><div class="mock-paw"><div class="mock-brand">PAWPAWDECORS</div><h3>Make yourself<br>at home.</h3><p>Thoughtful decor inspiration, garden ideas and plant-care guides.</p><div class="plant"><i></i><i></i><i></i><i></i></div></div></div></div><div class="site-copy"><div class="site-category">Home & garden · Founder</div><h3>PawpawDecors</h3><a class="domain" href="https://pawpawdecors.com" target="_blank" rel="noopener noreferrer">pawpawdecors.com ↗</a><p>Home styling, garden decor and practical plant-care content.</p><a class="site-link" href="https://pawpawdecors.com" target="_blank" rel="noopener noreferrer">Visit website <span>↗</span></a></div></article>
+        <article class="site-card"><div class="site-visual mravenzo"><div class="browser"><div class="browser-top"><i></i><i></i><i></i><span class="browser-url"></span></div><div class="mock-tools"><div class="mock-brand">MRAVENZO / ONLINE TOOLS</div><div class="calcbox"><div class="calc-value">12,450</div><div class="calc-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div><div class="site-copy"><div class="site-category">Digital tools · Founder</div><h3>Mravenzo</h3><a class="domain" href="https://mravenzo.com" target="_blank" rel="noopener noreferrer">mravenzo.com ↗</a><p>Free calculators and browser-based tools for everyday tasks.</p><a class="site-link" href="https://mravenzo.com" target="_blank" rel="noopener noreferrer">Visit website <span>↗</span></a></div></article>
       </div>
     </section>
 
-    <section class="section-band research-section" id="research" aria-labelledby="research-heading">
-      <div class="section-wrap">
-        <div class="section-kicker mono reveal"><span>02 <b>/</b> RESEARCH</span><i></i><small>AREAS OF EXPLORATION</small></div>
-        <div class="section-intro reveal">
-          <div><p class="micro-label mono">RESEARCH INTERESTS / 03 ACTIVE FIELDS</p><h2 class="section-title" id="research-heading">QUESTIONS<br><span>WORTH COMPUTING.</span></h2></div>
-          <p>Computational methods offer new ways to examine biological complexity. These are the areas I am currently exploring through study and project work.</p>
-        </div>
-        <div class="research-grid">
-          <article class="research-card card-tilt reveal" data-card="helix">
-            <div class="card-edge"></div><div class="research-card-head mono"><span>FIELD_01</span><span class="card-symbol">⌘</span></div>
-            <div class="research-visual dna-visual" aria-hidden="true"><div class="dna-strand strand-a"></div><div class="dna-strand strand-b"></div><div class="dna-rungs"></div></div>
-            <h3>Bioinformatics</h3><p>Biological sequence analysis, computational genomics, and bioinformatics workflows.</p>
-            <div class="research-card-foot mono"><span>SEQUENCE / GENOMICS</span><span>01</span></div>
-          </article>
-          <article class="research-card card-tilt reveal" data-card="molecule">
-            <div class="card-edge"></div><div class="research-card-head mono"><span>FIELD_02</span><span class="card-symbol">⌬</span></div>
-            <div class="research-visual molecule-visual" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><b></b></div>
-            <h3>Computational Biology</h3><p>Applying programming, statistics, and computational approaches to biological questions.</p>
-            <div class="research-card-foot mono"><span>MODELS / SYSTEMS</span><span>02</span></div>
-          </article>
-          <article class="research-card card-tilt reveal" data-card="network">
-            <div class="card-edge"></div><div class="research-card-head mono"><span>FIELD_03</span><span class="card-symbol">⠿</span></div>
-            <div class="research-visual network-visual" aria-hidden="true"><svg viewBox="0 0 240 120"><g class="network-lines"><path d="M24 76 66 34 116 67 171 25 216 70M24 76 78 103 116 67 155 104 216 70M66 34 78 103M171 25 155 104M66 34 171 25M24 76 216 70"/></g><g class="network-nodes"><circle cx="24" cy="76" r="5"/><circle cx="66" cy="34" r="5"/><circle cx="78" cy="103" r="5"/><circle cx="116" cy="67" r="7"/><circle cx="171" cy="25" r="5"/><circle cx="155" cy="104" r="5"/><circle cx="216" cy="70" r="5"/></g></svg></div>
-            <h3>AI / Machine Learning</h3><p>Exploring machine learning and data-driven methods for applications in biology and the life sciences.</p>
-            <div class="research-card-foot mono"><span>DATA / PREDICTION</span><span>03</span></div>
-          </article>
-          <!-- FUTURE RESEARCH SLOTS 04–10. Duplicate a research-card, update its content, and uncomment to publish.
-          <article class="research-card"><div class="research-card-head mono"><span>FIELD_04</span></div><h3>[Research area]</h3><p>[Short description]</p></article>
-          <article class="research-card"><div class="research-card-head mono"><span>FIELD_05</span></div><h3>[Research area]</h3><p>[Short description]</p></article>
-          <article class="research-card"><div class="research-card-head mono"><span>FIELD_06</span></div><h3>[Research area]</h3><p>[Short description]</p></article>
-          <article class="research-card"><div class="research-card-head mono"><span>FIELD_07</span></div><h3>[Research area]</h3><p>[Short description]</p></article>
-          <article class="research-card"><div class="research-card-head mono"><span>FIELD_08</span></div><h3>[Research area]</h3><p>[Short description]</p></article>
-          <article class="research-card"><div class="research-card-head mono"><span>FIELD_09</span></div><h3>[Research area]</h3><p>[Short description]</p></article>
-          <article class="research-card"><div class="research-card-head mono"><span>FIELD_10</span></div><h3>[Research area]</h3><p>[Short description]</p></article>
-          -->
-        </div>
+    <section class="section wrap" id="services">
+      <div class="section-intro"><div><p class="section-kicker">02 / WHAT I DO</p><h2 class="section-title">Digital, from <em>idea to launch.</em></h2></div><p>Practical creative and technical work for businesses, brands and online projects.</p></div>
+      <div class="services">
+        <article class="service"><span class="service-no">01</span><div class="service-text"><h3>Websites & management</h3><p>Design, build, updates, content and ongoing site care.</p></div></article>
+        <article class="service"><span class="service-no">02</span><div class="service-text"><h3>Graphic design</h3><p>Posters, promotional graphics and restaurant menus.</p></div></article>
+        <article class="service"><span class="service-no">03</span><div class="service-text"><h3>Automation</h3><p>WhatsApp chatbots and simple workflow automation.</p></div></article>
+        <article class="service"><span class="service-no">04</span><div class="service-text"><h3>Data & Python</h3><p>Data cleaning, analysis, visualisation and machine learning projects.</p></div></article>
       </div>
     </section>
 
-    <section class="section-wrap experience-section" id="experience" aria-labelledby="experience-heading">
-      <div class="section-kicker mono reveal"><span>03 <b>/</b> EXPERIENCE</span><i></i><small>RESEARCH EXPERIENCE</small></div>
-      <div class="experience-header reveal"><div><p class="micro-label mono">FIELDWORK / LABORATORY</p><h2 class="section-title" id="experience-heading">TIME IN THE<br><span>RESEARCH LOOP.</span></h2></div><div class="experience-coordinate mono"><span>EXPERIENCE_LOG</span><b>01 RECORD</b></div></div>
-      <div class="timeline-track">
-        <article class="experience-card reveal">
-          <div class="timeline-marker"><span></span><small class="mono">01</small></div>
-          <div class="experience-main">
-            <div class="experience-meta mono"><span>RESEARCH INTERNSHIP</span><span>JUN 2025 — JUL 2025</span></div>
-            <h3>Research Intern <em>— Biotechnology</em></h3>
-            <p class="experience-institute">National Institute for Genomics and Advanced Biotechnology (NIGAB)</p>
-            <p class="experience-location">National Agricultural Research Centre (NARC), Islamabad, Pakistan</p>
-            <div class="experience-tags mono"><span>2 MONTHS</span><span>BIOTECHNOLOGY</span><span>RESEARCH</span></div>
-          </div>
-          <div class="experience-aside mono"><span>01</span><b>2025</b><small>COMPLETED</small></div>
-        </article>
-        <!-- FUTURE EXPERIENCE SLOTS 02–10. Add dated, verifiable positions here; keep new entries commented until ready.
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>02</small></div><div class="experience-main"><div class="experience-meta"><span>[ROLE TYPE]</span><span>[DATES]</span></div><h3>[Role title]</h3><p>[Organization]</p><p>[Location]</p></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>03</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>04</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>05</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>06</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>07</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>08</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>09</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        <article class="experience-card"><div class="timeline-marker"><span></span><small>10</small></div><div class="experience-main"><h3>[Role title]</h3></div></article>
-        -->
+    <section class="section wrap" id="projects">
+      <div class="section-intro"><div><p class="section-kicker">03 / CODE & DATA</p><h2 class="section-title">Selected <em>projects.</em></h2></div><p>Computational projects using Python to work with biological and biomedical data.</p></div>
+      <div class="projects">
+        <article class="project"><div class="project-label">01 / STRUCTURAL BIOINFORMATICS</div><h3>AMR Structural Mutation Proximity Analysis</h3><p>A Python workflow measuring spatial distances between antimicrobial-resistance mutation pairs using CARD data and UniProt / AlphaFold protein structures.</p><div class="project-stat"><div><strong>112,882</strong><small>Mutation pairs</small></div><div><strong>20.304 Å</strong><small>Observed mean</small></div><div><strong>−2.579 Å</strong><small>Mean difference</small></div></div><div class="project-meta"><div class="project-tags"><span>Python</span><span>Protein structures</span><span>Data analysis</span></div><a href="https://github.com/talharaziq/amr-structural-epistasis" target="_blank" rel="noopener noreferrer">Source ↗</a></div></article>
+        <article class="project"><div class="project-label">02 / SINGLE-CELL TRANSCRIPTOMICS</div><h3>Single-Cell RNA-Seq Pipeline</h3><p>Scanpy and AnnData workflow for around 3,000 PBMCs, including quality control, PCA, Leiden clustering and UMAP visualisation.</p><div class="project-meta"><div class="project-tags"><span>Scanpy</span><span>AnnData</span><span>Python</span></div><a href="https://github.com/talharaziq/scRNAseq-PBMC-Analysis" target="_blank" rel="noopener noreferrer">Source ↗</a></div></article>
+        <article class="project"><div class="project-label">03 / BIOMEDICAL MACHINE LEARNING</div><h3>Breast Cancer Bone Relapse Prediction</h3><p>Compared Logistic Regression, Linear SVM and Random Forest on the GSE2034 gene-expression dataset.</p><div class="project-meta"><div class="project-tags"><span>scikit-learn</span><span>Classification</span></div><a href="https://github.com/talharaziq/breast-cancer-bone-relapse-prediction" target="_blank" rel="noopener noreferrer">Source ↗</a></div></article>
       </div>
     </section>
 
-    <section class="section-band projects-section" id="projects" aria-labelledby="projects-heading">
-      <div class="section-wrap">
-        <div class="section-kicker mono reveal"><span>04 <b>/</b> PROJECTS</span><i></i><small>SELECTED COMPUTATIONAL WORK</small></div>
-        <div class="projects-heading reveal"><div><p class="micro-label mono">RESEARCH / CODE / RESULTS</p><h2 class="section-title" id="projects-heading">BUILT TO<br><span>INVESTIGATE.</span></h2></div><p>Computational projects exploring antimicrobial resistance, single-cell transcriptomics, and gene-expression-based prediction.</p></div>
-
-        <div class="project-stack">
-          <article class="project-card project-one card-tilt reveal">
-            <div class="project-index mono"><span>PROJECT</span><b>01</b><i>STRUCTURAL BIOINFORMATICS</i></div>
-            <div class="project-art project-art-structure" aria-hidden="true"><div class="protein-orbit orbit-p1"></div><div class="protein-orbit orbit-p2"></div><div class="protein-core"></div><span class="atom atom-1"></span><span class="atom atom-2"></span><span class="atom atom-3"></span><span class="atom atom-4"></span><div class="art-coordinates mono">Cα / 3D<br>Å DISTANCE</div></div>
-            <div class="project-content">
-              <div class="project-tags mono"><span>PYTHON</span><span>AMR</span><span>PROTEIN STRUCTURES</span></div>
-              <h3>AMR Structural Mutation<br>Proximity Analysis</h3>
-              <p>Built a Python workflow to examine the spatial proximity of antimicrobial-resistance mutations using CARD mutation data and UniProt / AlphaFold protein structures. The analysis measures Cα–Cα distances between mutation pairs and compares observed pairs with a control.</p>
-              <div class="project-metrics">
-                <div><strong data-count="112882">112,882</strong><small class="mono">MUTATION PAIRS</small></div>
-                <div><strong>20.304 Å</strong><small class="mono">OBSERVED MEAN</small></div>
-                <div><strong>22.883 Å</strong><small class="mono">CONTROL MEAN</small></div>
-                <div><strong class="metric-delta">−2.579 Å</strong><small class="mono">MEAN DIFFERENCE</small></div>
-              </div>
-              <div class="project-links"><a href="https://github.com/talharaziq/amr-structural-epistasis" target="_blank" rel="noopener noreferrer">SOURCE CODE <span>↗</span></a><a href="https://talharaziq.github.io/tb-amr-structural-epistasis/figure3_interactive.html" target="_blank" rel="noopener noreferrer">INTERACTIVE STRUCTURE <span>↗</span></a></div>
-            </div>
-            <div class="project-state mono"><i></i> ANALYSIS_01</div>
-          </article>
-
-          <article class="project-card project-two card-tilt reveal">
-            <div class="project-index mono"><span>PROJECT</span><b>02</b><i>SINGLE-CELL TRANSCRIPTOMICS</i></div>
-            <div class="project-art project-art-umap" aria-hidden="true"><div class="umap-grid"></div><div class="umap-cloud cloud-a"></div><div class="umap-cloud cloud-b"></div><div class="umap-cloud cloud-c"></div><div class="umap-axis axis-x"></div><div class="umap-axis axis-y"></div><span class="umap-label label-a mono">CLUSTER_01</span><span class="umap-label label-b mono">CLUSTER_02</span><span class="umap-label label-c mono">CLUSTER_03</span></div>
-            <div class="project-content">
-              <div class="project-tags mono"><span>SCANPY</span><span>ANNDATA</span><span>PYTHON</span></div>
-              <h3>Single-Cell RNA-Seq<br>Analysis Pipeline</h3>
-              <p>Developed a single-cell RNA sequencing analysis workflow using Scanpy and AnnData on approximately 3,000 peripheral blood mononuclear cells (PBMCs). The pipeline covers quality control, dimensionality reduction with PCA, Leiden clustering, and UMAP visualization.</p>
-              <div class="project-facts mono"><span><b>~3,000</b> PBMCs</span><span><b>QC</b> quality control</span><span><b>PCA</b> dimensionality</span><span><b>UMAP</b> visualization</span></div>
-              <div class="project-links"><a href="https://github.com/talharaziq/scRNAseq-PBMC-Analysis" target="_blank" rel="noopener noreferrer">VIEW PROJECT ON GITHUB <span>↗</span></a></div>
-            </div>
-            <div class="project-state mono"><i></i> ANALYSIS_02</div>
-          </article>
-
-          <article class="project-card project-three card-tilt reveal">
-            <div class="project-index mono"><span>PROJECT</span><b>03</b><i>BIOMEDICAL MACHINE LEARNING</i></div>
-            <div class="project-art project-art-model" aria-hidden="true"><div class="model-lines"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="model-nodes"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div><div class="model-pulse"></div><span class="model-label mono">GSE2034 / MODEL</span></div>
-            <div class="project-content">
-              <div class="project-tags mono"><span>GENE EXPRESSION</span><span>SCIKIT-LEARN</span><span>CLASSIFICATION</span></div>
-              <h3>Breast Cancer Bone<br>Relapse Prediction</h3>
-              <p>Developed machine learning models to predict bone relapse in breast cancer using the GSE2034 gene-expression dataset, comprising 286 samples. Preprocessing, gene annotation, probe-to-gene aggregation, and feature selection produced 12,548 unique genes for downstream analysis.</p>
-              <p>Compared Logistic Regression, Linear SVM, and Random Forest using repeated stratified cross-validation. The mean cross-validated ROC-AUC was approximately 0.68.</p>
-              <div class="project-facts mono"><span><b>286</b> samples</span><span><b>12,548</b> genes</span><span><b>~0.68</b> mean CV ROC-AUC</span></div>
-              <div class="project-links"><a href="https://github.com/talharaziq/breast-cancer-bone-relapse-prediction" target="_blank" rel="noopener noreferrer">VIEW PROJECT ON GITHUB <span>↗</span></a></div>
-            </div>
-            <div class="project-state mono"><i></i> ANALYSIS_03</div>
-          </article>
-          <!-- FUTURE PROJECT SLOTS 04–10. Duplicate a complete project-card, replace its details and links, then uncomment.
-          <article class="project-card"><div class="project-index mono"><span>PROJECT</span><b>04</b></div><div class="project-content"><div class="project-tags mono"><span>[TOOLS]</span></div><h3>[Project title]</h3><p>[Project summary and methods.]</p><div class="project-links"><a href="[PROJECT URL]">VIEW PROJECT ↗</a></div></div></article>
-          <article class="project-card"><div class="project-index mono"><span>PROJECT</span><b>05</b></div><div class="project-content"><h3>[Project title]</h3><p>[Project summary and methods.]</p></div></article>
-          <article class="project-card"><div class="project-index mono"><span>PROJECT</span><b>06</b></div><div class="project-content"><h3>[Project title]</h3><p>[Project summary and methods.]</p></div></article>
-          <article class="project-card"><div class="project-index mono"><span>PROJECT</span><b>07</b></div><div class="project-content"><h3>[Project title]</h3><p>[Project summary and methods.]</p></div></article>
-          <article class="project-card"><div class="project-index mono"><span>PROJECT</span><b>08</b></div><div class="project-content"><h3>[Project title]</h3><p>[Project summary and methods.]</p></div></article>
-          <article class="project-card"><div class="project-index mono"><span>PROJECT</span><b>09</b></div><div class="project-content"><h3>[Project title]</h3><p>[Project summary and methods.]</p></div></article>
-          <article class="project-card"><div class="project-index mono"><span>PROJECT</span><b>10</b></div><div class="project-content"><h3>[Project title]</h3><p>[Project summary and methods.]</p></div></article>
-          -->
-        </div>
-      </div>
+    <section class="section wrap" id="about">
+      <div class="section-intro"><div><p class="section-kicker">04 / A LITTLE ABOUT ME</p><h2 class="section-title">A science degree.<br><em>A digital mindset.</em></h2></div><p>Biology is my academic foundation. Building for the web and working with data are where most of my current focus sits.</p></div>
+      <div class="science-band"><div><h3>Biotechnology graduate<br>with an interest in bioinformatics.</h3><p>Gomal University · Dera Ismail Khan, Pakistan. Research internship at the National Institute for Genomics and Advanced Biotechnology (NIGAB), NARC, Islamabad, in 2025.</p></div><div class="science-points"><div class="science-point"><strong>Academic background</strong><span>Biotechnology</span></div><div class="science-point"><strong>Research experience</strong><span>NIGAB · 2025</span></div><div class="science-point"><strong>Tools</strong><span>Python · Pandas · NumPy · scikit-learn · Scanpy · Linux</span></div><div class="science-point"><strong>Interest</strong><span>Bioinformatics & computational biology</span></div></div></div>
+      <article class="publication"><div><div class="pub-label">Selected publication · 2025</div><h3>Chloroplast Genetic Engineering in Crop Plants: Techniques and Applications</h3><p>Raziq, T. · International Journal of Agriculture Environment and Food Sciences, 9(Special), 239–246.</p></div><a class="pub-link" href="https://doi.org/10.31015/2025.si.10" target="_blank" rel="noopener noreferrer">Read publication ↗</a></article>
     </section>
 
-    <section class="section-wrap publication-section" id="publication" aria-labelledby="publication-heading">
-      <div class="section-kicker mono reveal"><span>05 <b>/</b> PUBLICATION</span><i></i><small>PEER-REVIEWED WORK</small></div>
-      <div class="publication-layout reveal">
-        <div class="publication-art" aria-hidden="true"><div class="paper-orbit orbit-a"></div><div class="paper-orbit orbit-b"></div><div class="paper-sheet"><div class="paper-top mono">IJAEFS / 2025</div><div class="paper-leaf"><i></i><i></i><i></i><i></i></div><div class="paper-lines"><i></i><i></i><i></i><i></i><i></i></div><span class="paper-number mono">09 / SI</span></div><div class="publication-stamp mono">PUBLISHED<br><b>2025</b></div></div>
-        <div class="publication-copy">
-          <p class="micro-label mono">PUBLICATION_RECORD / 001</p>
-          <h2 id="publication-heading">Chloroplast Genetic Engineering in Crop Plants: Techniques and Applications</h2>
-          <p class="publication-authors"><strong>Raziq, T.</strong> (2025)</p>
-          <p class="publication-journal">International Journal of Agriculture Environment and Food Sciences, 9(Special), 239–246.</p>
-          <p class="publication-summary">A review of chloroplast genetic engineering approaches in crop plants, covering major techniques and their applications in plant biotechnology.</p>
-          <a class="publication-link" href="https://doi.org/10.31015/2025.si.10" target="_blank" rel="noopener noreferrer"><span>READ THE PUBLICATION</span><b aria-hidden="true">↗</b></a>
-          <div class="doi-line mono"><span>DOI</span><span>10.31015/2025.si.10</span></div>
-        </div>
-      </div>
-      <!-- FUTURE PUBLICATION SLOTS 02–10. Copy this publication record structure and uncomment when an item is published.
-      <article class="publication-record"><h3>[Publication title]</h3><p>[Authors] ([Year])</p><p>[Journal, volume, issue, pages]</p><a href="[DOI OR URL]">[Publication link]</a></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      <article class="publication-record"><h3>[Publication title]</h3></article>
-      -->
-    </section>
-
-    <section class="section-band skills-section" id="skills" aria-labelledby="skills-heading">
-      <div class="section-wrap">
-        <div class="section-kicker mono reveal"><span>06 <b>/</b> SKILLS</span><i></i><small>TOOLS &amp; KNOWLEDGE AREAS</small></div>
-        <div class="skills-heading reveal"><div><p class="micro-label mono">CURRENT TOOLKIT</p><h2 class="section-title" id="skills-heading">THE WORKBENCH<span>.</span></h2></div><div class="skills-readout mono"><span>SKILL_MATRIX</span><b>4 CATEGORIES</b></div></div>
-        <div class="skills-console">
-          <div class="skills-console-top mono"><span><i></i> TOOLCHAIN / INDEX</span><span>DATA STRUCTURE: HUMAN-READABLE</span></div>
-          <div class="skills-grid">
-            <article class="skill-panel reveal"><div class="skill-panel-head mono"><span>01</span><b>PROGRAMMING &amp; DATA</b><span class="skill-glyph">{ }</span></div><div class="skill-chip-list"><span>Python</span><span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Statistics</span><span class="learning-chip">R <small>LEARNING</small></span></div><div class="skill-panel-foot mono">ANALYSIS / VISUALIZATION</div></article>
-            <article class="skill-panel reveal"><div class="skill-panel-head mono"><span>02</span><b>BIOINFORMATICS</b><span class="skill-glyph">⌬</span></div><div class="skill-chip-list"><span>Biopython</span><span>Sequence Analysis</span><span>Biological Data Analysis</span></div><div class="skill-panel-foot mono">SEQUENCE / BIOLOGICAL DATA</div></article>
-            <article class="skill-panel reveal"><div class="skill-panel-head mono"><span>03</span><b>COMPUTING</b><span class="skill-glyph">&gt;_</span></div><div class="skill-chip-list"><span>Linux</span><span>Command Line</span></div><div class="skill-panel-foot mono">SYSTEMS / TERMINAL WORKFLOWS</div></article>
-            <article class="skill-panel reveal"><div class="skill-panel-head mono"><span>04</span><b>RESEARCH AREAS</b><span class="skill-glyph">◎</span></div><div class="skill-chip-list"><span>Bioinformatics</span><span>Computational Biology</span><span>AI / ML</span><span>Genomics</span></div><div class="skill-panel-foot mono">BIOLOGY / COMPUTATION</div></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-wrap credentials-section" id="credentials" aria-labelledby="credentials-heading">
-      <div class="section-kicker mono reveal"><span>07 <b>/</b> CREDENTIALS</span><i></i><small>TRAINING &amp; MEMBERSHIP</small></div>
-      <div class="credentials-heading reveal"><div><p class="micro-label mono">CONTINUOUS LEARNING</p><h2 class="section-title" id="credentials-heading">LEARNING<br><span>IN MOTION.</span></h2></div><p>Training and professional membership alongside academic and project work.</p></div>
-      <div class="credential-columns">
-        <div class="training-column">
-          <div class="column-heading mono"><span>TRAINING / COURSES</span><b>03 RECORDS</b></div>
-          <article class="credential-card reveal"><div class="credential-icon icon-certificate" aria-hidden="true">✳</div><div><small class="mono">UNIVERSITY OF GLASGOW</small><h3>Biomedical Visualization</h3><a href="https://www.coursera.org/account/accomplishments/verify/WTHG4YI8BDUS" target="_blank" rel="noopener noreferrer">VERIFY CERTIFICATE <span>↗</span></a></div><span class="credential-index mono">TRN_01</span></article>
-          <article class="credential-card reveal"><div class="credential-icon icon-certificate" aria-hidden="true">✳</div><div><small class="mono">JOHNS HOPKINS UNIVERSITY</small><h3>Python for Genomic Data Science</h3><a href="https://www.coursera.org/account/accomplishments/verify/JJGLG3JTKQEE" target="_blank" rel="noopener noreferrer">VERIFY CERTIFICATE <span>↗</span></a></div><span class="credential-index mono">TRN_02</span></article>
-          <article class="credential-card reveal"><div class="credential-icon icon-certificate" aria-hidden="true">✳</div><div><small class="mono">JOHNS HOPKINS UNIVERSITY</small><h3>Genomic Data Science</h3><span class="credential-note mono">COURSE</span></div><span class="credential-index mono">TRN_03</span></article>
-          <!-- FUTURE TRAINING SLOTS 04–10. Add verified course or training details here; leave commented until ready.
-          <article class="credential-card"><div><h3>[Course or training]</h3><p>[Institution]</p><a href="[VERIFICATION URL]">VERIFY ↗</a></div></article>
-          <article class="credential-card"><div><h3>[Course or training]</h3></div></article><article class="credential-card"><div><h3>[Course or training]</h3></div></article>
-          <article class="credential-card"><div><h3>[Course or training]</h3></div></article><article class="credential-card"><div><h3>[Course or training]</h3></div></article>
-          <article class="credential-card"><div><h3>[Course or training]</h3></div></article><article class="credential-card"><div><h3>[Course or training]</h3></div></article>
-          -->
-        </div>
-        <div class="membership-column">
-          <div class="column-heading mono"><span>PROFESSIONAL MEMBERSHIP</span><b>01 RECORD</b></div>
-          <article class="membership-card reveal">
-            <div class="membership-orbit" aria-hidden="true"><span></span><i></i><b></b></div>
-            <p class="micro-label mono">MEMBERSHIP / 001</p>
-            <h3>American Society<br>for Microbiology</h3>
-            <p class="membership-role mono">MEMBER</p>
-            <a href="https://drive.google.com/file/d/1WgWLQ6Zc2LWKHI4Ft0ycKR_cPMKJPgZ0/view" target="_blank" rel="noopener noreferrer">VIEW MEMBERSHIP CERTIFICATE <span>↗</span></a>
-            <span class="membership-watermark mono">ASM</span>
-          </article>
-          <!-- FUTURE MEMBERSHIP SLOTS 02–10. Duplicate a membership record, add its supporting link, and uncomment.
-          <article class="membership-card"><h3>[Organization]</h3><p>[Membership level]</p></article>
-          <article class="membership-card"><h3>[Organization]</h3></article><article class="membership-card"><h3>[Organization]</h3></article>
-          <article class="membership-card"><h3>[Organization]</h3></article><article class="membership-card"><h3>[Organization]</h3></article>
-          <article class="membership-card"><h3>[Organization]</h3></article><article class="membership-card"><h3>[Organization]</h3></article>
-          <article class="membership-card"><h3>[Organization]</h3></article><article class="membership-card"><h3>[Organization]</h3></article>
-          -->
-        </div>
-      </div>
-    </section>
-
-    <section class="section-band education-section" id="education" aria-labelledby="education-heading">
-      <div class="section-wrap education-layout">
-        <div class="education-copy reveal"><div class="section-kicker mono"><span>08 <b>/</b> EDUCATION</span><i></i><small>ACADEMIC FOUNDATION</small></div><p class="micro-label mono">ACADEMIC_RECORD / 001</p><h2 class="section-title" id="education-heading">THE ROOTS<br><span>OF INQUIRY.</span></h2><p class="education-summary">A bachelor's degree in Biotechnology, providing the academic foundation for further exploration in bioinformatics and computational biology.</p></div>
-        <article class="education-card card-tilt reveal"><div class="education-card-top mono"><span>DEGREE RECORD</span><span>EDU_001</span></div><div class="university-seal" aria-hidden="true"><span>GU</span><i></i></div><div class="education-degree mono">BACHELOR'S DEGREE</div><h3>Biotechnology</h3><p class="education-institution">Gomal University</p><p class="education-location">Dera Ismail Khan, Pakistan</p><div class="education-card-bottom mono"><span>COMPLETED</span><span>ACADEMIC FOUNDATION / LIFE SCIENCES</span></div></article>
-        <!-- FUTURE EDUCATION SLOTS 02–10. Add additional qualifications here when available.
-        <article class="education-card"><h3>[Degree / Qualification]</h3><p>[Institution]</p><p>[Location]</p></article>
-        <article class="education-card"><h3>[Degree / Qualification]</h3></article><article class="education-card"><h3>[Degree / Qualification]</h3></article>
-        <article class="education-card"><h3>[Degree / Qualification]</h3></article><article class="education-card"><h3>[Degree / Qualification]</h3></article>
-        <article class="education-card"><h3>[Degree / Qualification]</h3></article><article class="education-card"><h3>[Degree / Qualification]</h3></article>
-        <article class="education-card"><h3>[Degree / Qualification]</h3></article><article class="education-card"><h3>[Degree / Qualification]</h3></article>
-        -->
-      </div>
-    </section>
-
-    <section class="section-wrap contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="section-kicker mono reveal"><span>09 <b>/</b> CONTACT</span><i></i><small>OPEN CHANNEL</small></div>
-      <div class="contact-panel reveal">
-        <div class="contact-grid-art" aria-hidden="true"></div>
-        <div class="contact-content"><p class="micro-label mono">CONNECTION REQUEST / READY</p><h2 id="contact-heading">LET'S CONNECT<br><span>THE DOTS.</span></h2><p>For research conversations, collaboration, or professional inquiries, you can reach me through the channels below.</p><a class="contact-email mono" href="mailto:talha47raziq@gmail.com">TALHA47RAZIQ@GMAIL.COM <b>↗</b></a></div>
-        <div class="contact-links mono"><a href="https://pk.linkedin.com/in/talharaziq" target="_blank" rel="noopener noreferrer"><span>01</span> LINKEDIN <b>↗</b></a><a href="https://github.com/talharaziq" target="_blank" rel="noopener noreferrer"><span>02</span> GITHUB <b>↗</b></a><a href="https://scholar.google.com/citations?user=6vRb9FUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><span>03</span> GOOGLE SCHOLAR <b>↗</b></a></div>
-        <div class="contact-scanline" aria-hidden="true"></div>
-      </div>
-    </section>
+    <section class="contact wrap" id="contact"><div><h2>HAVE A PROJECT?<br>LET'S MAKE IT REAL.</h2><p>Websites, design, automation or data work — tell me what you have in mind.</p></div><a href="mailto:talharaziq@outlook.com">talharaziq@outlook.com ↗</a></section>
   </main>
-
-  <footer class="site-footer mono"><div class="footer-brand"><span class="brand-glyph">T<span>R</span></span><span> TALHA RAZIQ <small>BIOTECHNOLOGY / BIOINFORMATICS</small></span></div><div class="footer-note">BUILT AROUND CURIOSITY <span>·</span> © <span id="current-year">2026</span> TALHA RAZIQ</div><a href="#home" class="back-to-top">BACK TO TOP <b>↑</b></a></footer>
-
-  <noscript><div class="noscript-note">JavaScript is disabled. The portfolio content remains available; visual scan and motion effects require JavaScript.</div></noscript>
-  <script src="script.js" defer></script>
+  <footer class="wrap"><span class="footer-urdu" lang="ur">طلحہ</span><span>© <span id="year">2026</span> Talha Raziq · Made with intent</span><div class="footer-social"><a href="https://www.linkedin.com/in/talharaziq" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://x.com/talha_raziq" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.instagram.com/raayzik/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://github.com/talharaziq" target="_blank" rel="noopener noreferrer">GitHub</a></div></footer>
+  <script>
+    (()=>{
+      const root=document.documentElement,button=document.getElementById('theme-toggle'),icon=document.getElementById('theme-icon');
+      try{const saved=localStorage.getItem('talha-portfolio-theme');if(saved==='dark'||saved==='light')root.dataset.theme=saved}catch(e){}
+      function sync(){const dark=root.dataset.theme==='dark';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');icon.innerHTML=dark?'<path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5a8.5 8.5 0 1 0 12 12Z"/>':'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>';document.querySelector('meta[name="theme-color"]').content=dark?'#171714':'#f5f1eb'}
+      button.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('talha-portfolio-theme',root.dataset.theme)}catch(e){}sync()});
+      document.getElementById('year').textContent=new Date().getFullYear();sync();
+    })();
+  </script>
 </body>
 </html>

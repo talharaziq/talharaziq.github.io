@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://talharaziq.github.io/sitemap.xml
