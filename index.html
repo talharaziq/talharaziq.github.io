@@ -1,198 +1,375 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f1eb">
-  <meta name="color-scheme" content="light dark">
-  <meta name="google-site-verification" content="3p7_v4r6FUq01RGsQReCgfqVIZ0K1dKJLRt2dojPBKI">
-  <meta name="author" content="Talha Raziq">
-  <meta name="description" content="Talha Raziq — biotechnology graduate, data scientist and web developer. Founder of OopsGene, PawpawDecors and Mravenzo.">
-  <meta name="keywords" content="Talha Raziq, web development, website management, data science, biotechnology, bioinformatics, graphic design, WhatsApp automation">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://talharaziq.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Talha Raziq — Digital Projects & Data">
-  <meta property="og:description" content="Websites, digital experiences, automation and data projects by Talha Raziq.">
-  <meta property="og:url" content="https://talharaziq.github.io/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Talha Raziq — Digital Projects & Data">
-  <meta name="twitter:description" content="Websites, digital experiences, automation and data projects by Talha Raziq.">
-  <title>Talha Raziq — Digital Projects & Data</title>
+  <meta name="theme-color" content="#eeeeea">
+  <meta name="description" content="Talha Raziq — biotechnology graduate, web developer, website manager and AI automation builder.">
+  <title>Talha Raziq — a work in progress, in pencil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg:#f5f1eb; --paper:#fffdfa; --ink:#191714; --muted:#77716a; --line:#e7e0d8;
-      --orange:#ed5a19; --orange-deep:#d94910; --orange-light:#ff7938; --cream:#fbf7f1;
-      --navy:#1b2028; --green:#5f755d; --shadow:0 22px 60px rgba(49,34,21,.10);
-      --sans:'DM Sans',Arial,sans-serif; --display:'Bebas Neue',Impact,sans-serif;
-      --serif:'Playfair Display',Georgia,serif; --urdu:'Noto Nastaliq Urdu',serif;
-      --max:1240px;
-    }
-    html[data-theme="dark"] {
-      color-scheme:dark; --bg:#171714; --paper:#201f1b; --ink:#f6f0e8; --muted:#b3a99e;
-      --line:#38332d; --cream:#24221e; --navy:#111318; --shadow:0 22px 60px rgba(0,0,0,.32);
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:30px}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
-    a{color:inherit;text-decoration:none} button{font:inherit} img{max-width:100%;display:block}
-    a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
-    ::selection{background:var(--orange);color:#fff}
-    .wrap{width:min(var(--max),calc(100% - 64px));margin-inline:auto}
-    .site-head{height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:10px}
-    .brand-urdu{font-family:var(--urdu);font-size:27px;line-height:1.5;color:var(--orange);padding-top:3px}
-    .brand-sub{font-size:9px;letter-spacing:.18em;font-weight:800;text-transform:uppercase;color:var(--muted)}
-    .nav{display:flex;align-items:center;gap:30px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--muted)}
-    .nav a{transition:color .2s}.nav a:hover{color:var(--orange)}
-    .header-actions{display:flex;align-items:center;gap:12px}
-    .theme-toggle{width:37px;height:37px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--ink);cursor:pointer;transition:transform .2s,border .2s}
-    .theme-toggle:hover{transform:rotate(15deg);border-color:var(--orange)}.theme-toggle svg{width:16px;height:16px}
-    .header-contact{padding:11px 17px;background:var(--ink);color:var(--bg);border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,background .2s}
-    .header-contact:hover{transform:translateY(-2px);background:var(--orange)}
-
-    /* Hero: split editorial composition inspired by the supplied reference. */
-    .hero-frame{position:relative;min-height:700px;height:min(770px,calc(100svh - 104px));max-height:800px;overflow:hidden;border-radius:24px;background:var(--paper);box-shadow:var(--shadow);isolation:isolate}
-    .hero-orange{position:absolute;inset:0 43% 0 0;background:radial-gradient(circle at 26% 28%,rgba(255,181,108,.30),transparent 34%),linear-gradient(132deg,var(--orange-light),var(--orange) 54%,var(--orange-deep));overflow:hidden}
-    .hero-orange:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;border:1px solid rgba(255,255,255,.10);left:-210px;top:36px;box-shadow:0 0 0 48px rgba(255,255,255,.035),0 0 0 100px rgba(255,255,255,.025)}
-    .hero-white{position:absolute;inset:0 0 0 57%;background:var(--cream)}
-    .hero-grain{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
-    .hero-word{position:absolute;z-index:2;left:4.5%;top:31%;width:58%;font-family:var(--display);font-size:clamp(110px,17vw,245px);line-height:.76;letter-spacing:-.025em;color:#fff;white-space:nowrap;pointer-events:none}
-    .hero-word span{display:block}.hero-word .second{font-size:.70em;margin-top:13px;letter-spacing:.015em}
-    .hero-portrait{position:absolute;z-index:4;bottom:-2.4%;left:49.5%;height:103%;width:auto;max-width:none;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 18px 25px rgba(52,25,14,.18));transform:translateX(-50%);pointer-events:none}
-    .hero-topline{position:absolute;z-index:5;top:32px;left:4.2%;right:4.2%;display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
-    .hero-name{font-family:var(--urdu);font-size:clamp(32px,4.2vw,58px);line-height:1.55;color:#fff;text-shadow:0 3px 18px rgba(104,32,7,.12);direction:rtl}
-    .hero-index{margin-top:13px;font:9px var(--sans);font-weight:700;letter-spacing:.20em;color:rgba(255,255,255,.72);text-transform:uppercase}
-    .hero-index span{display:block;margin-top:7px;font:10px var(--sans);letter-spacing:.06em;text-transform:none;color:rgba(255,255,255,.88)}
-    .hero-right-copy{position:absolute;z-index:5;top:29%;right:5.2%;width:24%;max-width:245px}
-    .availability{font:9px var(--sans);font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:8px}
-    .availability:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(95,117,93,.13)}
-    .hero-right-copy h1{font-size:clamp(30px,4.4vw,58px);line-height:.98;letter-spacing:-.07em;margin:19px 0 14px;font-weight:800}
-    .hero-right-copy h1 em{font-family:var(--serif);font-weight:500;color:var(--orange);letter-spacing:-.055em}
-    .hero-right-copy p{font-size:12px;line-height:1.85;color:var(--muted);margin:0;max-width:235px}
-    .hero-cta{display:inline-flex;align-items:center;gap:18px;margin-top:24px;padding:12px 15px;border-radius:99px;background:var(--orange);color:#fff;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 10px 23px rgba(237,90,25,.22);transition:transform .2s,box-shadow .2s}
-    .hero-cta:hover{transform:translateY(-3px);box-shadow:0 15px 28px rgba(237,90,25,.30)}
-    .hero-cta b{font-size:16px;font-weight:400;line-height:10px}
-    .hero-foot{position:absolute;z-index:6;left:4.2%;right:4.2%;bottom:28px;display:flex;justify-content:space-between;align-items:flex-end;gap:25px}
-    .hero-caption{max-width:300px;color:rgba(255,255,255,.83);font-size:10px;line-height:1.7}
-    .hero-caption strong{display:block;color:#fff;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
-    .hero-social{display:flex;gap:8px;align-items:center}
-    .hero-social a{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;color:var(--ink);background:rgba(255,253,250,.85);transition:transform .2s,background .2s,color .2s}
-    .hero-social a:hover{transform:translateY(-5px);background:var(--orange);color:white}.hero-social svg{width:14px;height:14px}
-    .hero-scroll{position:absolute;z-index:6;bottom:31px;right:4.2%;font:8px var(--sans);font-weight:700;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;writing-mode:vertical-rl}
-
-    .section{padding:112px 0 0}.section-kicker{font-size:9px;color:var(--orange);letter-spacing:.2em;text-transform:uppercase;font-weight:800;margin:0 0 16px}
-    .section-title{font-size:clamp(40px,6vw,78px);line-height:.91;letter-spacing:-.075em;font-weight:800;margin:0}.section-title em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--orange);letter-spacing:-.05em}
-    .section-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:34px}.section-intro p:last-child{max-width:360px;margin:0 0 4px;color:var(--muted);font-size:12px;line-height:1.9}
-
-    .websites{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .site-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;min-width:0;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .2s}
-    .site-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:transparent}
-    .site-visual{height:205px;padding:16px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    .site-visual.oops{background:#dbe5ef}.site-visual.paw{background:#e8e8dc}.site-visual.mravenzo{background:#dce2ee}
-    .browser{width:100%;height:100%;border-radius:10px;background:#fff;box-shadow:0 12px 25px rgba(20,24,28,.12);overflow:hidden;color:#20242a;transition:transform .4s}
-    .site-card:hover .browser{transform:scale(1.035) rotate(-.5deg)}
-    .browser-top{height:19px;background:#f8f8f7;border-bottom:1px solid #ecece9;display:flex;align-items:center;padding:0 8px;gap:4px}
-    .browser-top i{width:5px;height:5px;border-radius:50%;background:#d3d3cf}.browser-url{height:7px;width:34%;margin-left:auto;background:#ededeb;border-radius:6px}
-    .mock-oops{padding:13px 13px}.mock-brand{font-size:8px;font-weight:800;letter-spacing:.15em}.mock-oops-head{display:grid;grid-template-columns:1.1fr .9fr;gap:8px;margin-top:15px;align-items:center}.mock-oops h3{font:25px/.96 Georgia,serif;letter-spacing:-.05em;margin:0;color:#1e2f47}.mock-oops p{font-size:7px;line-height:1.5;color:#738095;margin:7px 0}.mock-button{display:inline-block;background:#253f5f;color:#fff;padding:5px 7px;border-radius:20px;font-size:6px}.mock-paper{height:67px;border-radius:8px;background:#dce5f0;padding:12px;display:grid;gap:6px}.mock-paper i{height:4px;border-radius:4px;background:#9eafc3}.mock-paper i:nth-child(2){width:80%}.mock-paper i:nth-child(3){width:60%}
-    .mock-paw{height:calc(100% - 19px);padding:16px;position:relative;background:linear-gradient(110deg,#faf8ef 0 57%,#e1e8dc 57%)}.mock-paw .mock-brand{color:#647b5c}.mock-paw h3{position:relative;z-index:2;margin:20px 0 0;font:28px/.9 Georgia,serif;color:#42513f;letter-spacing:-.05em}.mock-paw p{position:relative;z-index:2;max-width:130px;font-size:7px;color:#778171;line-height:1.5}.plant{position:absolute;right:3px;bottom:-8px;width:115px;height:145px}.plant:before{content:"";position:absolute;width:2px;height:125px;left:58px;bottom:0;background:#6d876b;transform:rotate(7deg)}.plant i{position:absolute;width:35px;height:60px;border-radius:100% 0 100% 0;background:#879e7b;transform:rotate(-25deg)}.plant i:nth-child(1){left:14px;top:34px}.plant i:nth-child(2){left:47px;top:7px;transform:rotate(30deg);background:#6e8a6d}.plant i:nth-child(3){left:60px;top:65px;transform:rotate(45deg);background:#a8b69a}.plant i:nth-child(4){left:22px;top:83px;transform:rotate(-45deg);background:#9cab8b}
-    .mock-tools{height:calc(100% - 19px);padding:11px 13px;background:#f5f7fa}.mock-tools .mock-brand{color:#203a5a}.calcbox{width:75%;margin:12px auto 0;padding:8px;border:1px solid #dce3ed;border-radius:8px;background:white;box-shadow:0 5px 13px rgba(20,40,60,.08)}.calc-value{text-align:right;background:#eef2f7;padding:7px;border-radius:4px;font:17px monospace;color:#24415e}.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:6px}.calc-grid i{height:11px;border-radius:3px;background:#edf0f4}.calc-grid i:nth-child(4n){background:#d9e4f0}
-    .site-copy{padding:20px 20px 18px}.site-category{font-size:8px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;font-weight:800}.site-copy h3{font-size:25px;letter-spacing:-.06em;margin:9px 0 2px}.domain{font-size:10px;color:var(--orange);font-weight:700}.site-copy p{min-height:52px;font-size:11px;line-height:1.75;color:var(--muted);margin:12px 0 16px}.site-link{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:13px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.site-link span{font-size:17px;color:var(--orange);transition:transform .2s}.site-card:hover .site-link span{transform:translate(4px,-3px)}
-
-    .services{display:grid;grid-template-columns:1fr 1fr;gap:14px}.service{display:flex;align-items:center;gap:19px;padding:22px 23px;background:var(--paper);border:1px solid var(--line);border-radius:17px;transition:background .25s,border .25s,transform .25s}.service:hover{background:var(--cream);border-color:var(--orange);transform:translateY(-4px)}.service-no{font:26px var(--display);color:var(--orange);width:28px}.service-text h3{font-size:16px;margin:0 0 3px;letter-spacing:-.03em}.service-text p{margin:0;color:var(--muted);font-size:10px;line-height:1.65}
-
-    .projects{display:grid;grid-template-columns:1.2fr .8fr;gap:15px}.project{border-radius:19px;background:var(--navy);color:#fff;padding:25px;min-height:230px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}.project:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.project:first-child{grid-row:span 2;min-height:475px;background:linear-gradient(145deg,#202a3b,#121923)}.project:after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(255,255,255,.10);border-radius:50%;right:-80px;top:-80px;box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 70px rgba(255,255,255,.02)}.project-label{font:8px var(--sans);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ff9a6b}.project h3{position:relative;z-index:1;font-size:25px;max-width:480px;line-height:1.1;letter-spacing:-.05em;margin:22px 0 9px}.project p{position:relative;z-index:1;max-width:480px;color:rgba(255,255,255,.67);font-size:11px;line-height:1.8;margin:0}.project-meta{position:absolute;z-index:2;bottom:22px;left:25px;right:25px;display:flex;align-items:center;justify-content:space-between;gap:12px}.project-tags{display:flex;flex-wrap:wrap;gap:6px}.project-tags span{padding:5px 8px;border:1px solid rgba(255,255,255,.18);border-radius:50px;color:rgba(255,255,255,.78);font:8px var(--sans)}.project-meta a{font-size:10px;font-weight:800;color:#fff}.project-meta a:hover{color:#ff9a6b}.project-stat{margin-top:25px;display:flex;gap:20px;position:relative;z-index:1}.project-stat strong{display:block;font-size:23px;letter-spacing:-.04em}.project-stat small{display:block;color:rgba(255,255,255,.5);font:8px var(--sans);letter-spacing:.12em;text-transform:uppercase}
-
-    .science-band{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--paper)}.science-band h3{font-size:26px;line-height:1.05;letter-spacing:-.055em;margin:0 0 12px}.science-band p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}.science-points{display:grid;gap:12px}.science-point{display:flex;justify-content:space-between;gap:18px;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:10px}.science-point span{color:var(--muted);text-align:right}
-    .publication{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:22px 25px;border-radius:18px;background:#f4e8dc;border:1px solid #ead7c7;color:#282018}.pub-label{font:8px var(--sans);font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#ad552f}.publication h3{font:19px/1.25 var(--serif);max-width:650px;margin:7px 0}.publication p{font-size:10px;color:#77675c;margin:0}.pub-link{flex:none;padding:11px 14px;background:#29231f;color:#fff;border-radius:99px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;transition:background .2s}.pub-link:hover{background:var(--orange)}
-    .contact{margin:110px 0 50px;padding:34px 35px;border-radius:22px;background:var(--orange);color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;position:relative;overflow:hidden}.contact:after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.2);border-radius:50%;right:16%;top:-220px;box-shadow:0 0 0 40px rgba(255,255,255,.05),0 0 0 80px rgba(255,255,255,.04)}.contact h2{font:clamp(34px,5vw,60px)/.9 var(--display);margin:0;letter-spacing:.01em}.contact p{position:relative;z-index:1;color:rgba(255,255,255,.8);font-size:11px;max-width:380px}.contact a{position:relative;z-index:1;flex:none;padding:14px 19px;border-radius:99px;background:#fff;color:#222;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:transform .2s}.contact a:hover{transform:translateY(-3px)}
-    footer{padding:0 0 28px;display:flex;align-items:center;justify-content:space-between;gap:15px;color:var(--muted);font-size:9px;letter-spacing:.08em;text-transform:uppercase}.footer-urdu{font-family:var(--urdu);font-size:18px;color:var(--orange)}.footer-social{display:flex;gap:12px}.footer-social a:hover{color:var(--orange)}
-    @media(max-width:900px){.hero-frame{min-height:640px;height:690px}.hero-orange{right:38%}.hero-white{left:62%}.hero-word{top:33%;font-size:clamp(110px,18vw,190px);left:4%}.hero-portrait{height:90%;left:50%}.hero-right-copy{right:3.2%;width:25%;top:30%}.hero-right-copy h1{font-size:36px}.websites{grid-template-columns:1fr 1fr}.site-card:last-child{grid-column:span 2;display:grid;grid-template-columns:.9fr 1.1fr}.site-card:last-child .site-visual{height:auto;min-height:200px}.projects{grid-template-columns:1fr 1fr}.project:first-child{grid-row:auto;grid-column:span 2;min-height:330px}}
-    @media(max-width:640px){.wrap{width:calc(100% - 30px)}.site-head{height:70px}.brand-urdu{font-size:23px}.brand-sub{font-size:8px}.nav{display:none}.header-contact{padding:10px 13px;font-size:9px}.hero-frame{height:720px;min-height:0;border-radius:17px}.hero-orange{inset:0 0 38% 0}.hero-white{inset:62% 0 0 0}.hero-topline{top:18px;left:20px;right:20px}.hero-name{font-size:40px}.hero-index{font-size:8px;margin-top:8px}.hero-word{left:5%;top:23%;font-size:clamp(110px,34vw,164px);line-height:.74;width:90%}.hero-word .second{font-size:.67em;margin-top:8px}.hero-portrait{height:66%;max-height:520px;left:51%;bottom:33%;transform:translateX(-50%);z-index:4}.hero-right-copy{top:auto;right:6%;bottom:62px;width:53%;max-width:235px}.availability{font-size:7px}.hero-right-copy h1{font-size:30px;margin:10px 0 7px}.hero-right-copy p{font-size:9px;line-height:1.55}.hero-cta{margin-top:12px;padding:9px 12px;font-size:8px}.hero-foot{bottom:15px;left:19px;right:19px}.hero-caption{font-size:8px;max-width:42%;color:var(--muted)}.hero-caption strong{color:var(--ink);font-size:9px}.hero-social{gap:5px}.hero-social a{width:26px;height:26px}.hero-social svg{width:12px;height:12px}.hero-scroll{display:none}.section{padding-top:77px}.section-intro{display:block}.section-title{font-size:clamp(42px,12vw,62px)}.section-intro p:last-child{margin-top:14px;font-size:11px}.websites{grid-template-columns:1fr;gap:12px}.site-card:last-child{grid-column:auto;display:block}.site-card:last-child .site-visual{height:190px;min-height:0}.site-visual{height:190px}.site-copy p{min-height:0}.services{grid-template-columns:1fr;gap:9px}.service{padding:17px}.projects{grid-template-columns:1fr}.project:first-child{grid-column:auto;min-height:395px}.project{min-height:270px;padding:21px}.project h3{font-size:22px}.project-meta{left:21px;right:21px;bottom:19px;align-items:flex-end}.project-stat{gap:16px}.project-stat strong{font-size:19px}.science-band{grid-template-columns:1fr;gap:20px;padding:20px}.publication{display:block;padding:20px}.pub-link{display:inline-block;margin-top:16px}.contact{margin:75px 0 35px;padding:25px 21px;display:block}.contact p{max-width:100%;font-size:10px}.contact a{display:inline-block;margin-top:8px}footer{flex-wrap:wrap;font-size:8px}.footer-social{width:100%;order:3}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
-  </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Talha Raziq","url":"https://talharaziq.github.io/","jobTitle":["Biotechnology Graduate","Data Scientist","Web Developer","Website Manager"],"email":"mailto:talharaziq@outlook.com","alumniOf":{"@type":"CollegeOrUniversity","name":"Gomal University"},"sameAs":["https://www.linkedin.com/in/talharaziq","https://x.com/talha_raziq","https://www.instagram.com/raayzik/","https://github.com/talharaziq"],"knowsAbout":["Website development","Website management","Graphic design","WhatsApp automation","Python","Data analysis","Biotechnology","Bioinformatics"]}
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body id="top">
-  <header class="site-head wrap">
-    <a class="brand" href="#top" aria-label="Talha home"><span class="brand-urdu" lang="ur">طلحہ</span><span class="brand-sub">Personal portfolio</span></a>
-    <nav class="nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-    <div class="header-actions">
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
-        <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-      </button>
-      <a class="header-contact" href="mailto:talharaziq@outlook.com">Let's talk ↗</a>
-    </div>
-  </header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="paper-grain" aria-hidden="true"></div>
 
-  <main>
-    <section class="hero-frame wrap" aria-label="Talha Raziq portfolio introduction">
-      <div class="hero-orange"></div><div class="hero-white"></div><div class="hero-grain"></div>
-      <div class="hero-topline"><div><div class="hero-name" lang="ur" dir="rtl">طلحہ</div><div class="hero-index">TALHA RAZIQ <span>Independent digital creator</span></div></div><div class="hero-index" style="text-align:right">WEB · DATA · DESIGN<br><span>LAHORE / PAKISTAN</span></div></div>
-      <div class="hero-word" aria-hidden="true"><span>CREATE</span><span class="second">DIGITAL</span></div>
-      <img class="hero-portrait" src="assets/talha-portrait.webp" alt="Stylised illustrated portrait of Talha Raziq" fetchpriority="high">
-      <div class="hero-right-copy"><div class="availability">Available for select projects</div><h1>Ideas into<br><em>real things.</em></h1><p>Websites, digital design and automations — with a data-minded approach and a biotechnology background.</p><a class="hero-cta" href="#work">Explore selected work <b>↗</b></a></div>
-      <div class="hero-foot"><div class="hero-caption"><strong>Talha Raziq</strong>Web developer · Website manager · Data scientist</div>
-        <div class="hero-social" aria-label="Social links">
-          <a href="https://www.linkedin.com/in/talharaziq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V8.99h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V8.99h3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
-          <a href="mailto:talharaziq@outlook.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a>
-          <a href="https://x.com/talha_raziq" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.15h3.68l-8.04 9.19L24 23.22h-7.59l-5.8-7.58-6.63 7.58H.3l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.79h2.04L6.19 3.3H4.01L17.61 20.94Z"/></svg></a>
-          <a href="https://www.instagram.com/raayzik/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="18" cy="6.4" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://github.com/talharaziq" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.06c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.61 1.21 3.25.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.54.23 2.68.12 2.96.71.78 1.14 1.78 1.14 3.01 0 4.29-2.61 5.23-5.1 5.5.4.35.75 1.03.75 2.08V22c0 .29.2.63.76.52A11.1 11.1 0 0 0 12 .9Z"/></svg></a>
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <div class="header-scribble">
+        <a class="monogram" href="#top" aria-label="Talha Raziq, back to top">tr<span>.</span></a>
+        <span class="header-label">PERSONAL FIELD NOTES</span>
+        <span class="header-edition">VOL. 01 <i>·</i> 2026</span>
+      </div>
+
+      <div class="social-panel-wrap">
+        <p class="social-caption">find me in a few corners of the internet</p>
+        <div class="social-panel" aria-label="Social media links">
+          <a class="social-link social-email" href="mailto:talharaziq@outlook.com" aria-label="Email Talha Raziq" title="Email">
+            <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+              <path d="M7 14.5 23.8 27 41 14.3M8.5 12.7h31a3 3 0 0 1 3 3v18.6a3 3 0 0 1-3 3h-31a3 3 0 0 1-3-3V15.7a3 3 0 0 1 3-3Z" fill="none" stroke="#8b7770" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="m9 16 14.8 11M39 16 24 27" fill="none" stroke="#c9a18b" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <span>Email</span>
+          </a>
+          <a class="social-link social-instagram" href="https://www.instagram.com/raayzik/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, raayzik" title="Instagram">
+            <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+              <rect x="8" y="8" width="32" height="32" rx="9" fill="none" stroke="#bf826c" stroke-width="2.4"/>
+              <circle cx="24" cy="24" r="7.5" fill="none" stroke="#9f8ab0" stroke-width="2.5"/>
+              <circle cx="34" cy="14.5" r="2" fill="#d49b65"/>
+              <path d="M12 12c6-5 17-6 23-1M11 36c7 5 19 4 26-2" fill="none" stroke="#d5a36c" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social-link social-linkedin" href="https://www.linkedin.com/in/talharaziq/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn, Talha Raziq" title="LinkedIn">
+            <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+              <path d="M8 9.5c0-1.2 1-2.2 2.2-2.2h27.6c1.2 0 2.2 1 2.2 2.2v29c0 1.2-1 2.2-2.2 2.2H10.2A2.2 2.2 0 0 1 8 38.5v-29Z" fill="none" stroke="#7898ae" stroke-width="2.1"/>
+              <path d="M15.5 20v13M15.5 14.7v.2M22.5 33V20h5.3v2c1-1.7 2.6-2.5 4.5-2.5 4 0 5.1 2.7 5.1 6.3V33" fill="none" stroke="#658ca3" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="15.5" cy="14.8" r="1.6" fill="#b3a0bd"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a class="social-link social-x" href="https://twitter.com/talha_raziq" target="_blank" rel="noopener noreferrer" aria-label="X, talha_raziq" title="X / Twitter">
+            <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+              <path d="M11 9h7.2l18.8 30h-7.2L11 9Z" fill="none" stroke="#7b858a" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="m35.5 9-23 30" fill="none" stroke="#9a8c82" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M8 12c4-2 8-2 12 0M28 36c4 2 8 2 12 0" fill="none" stroke="#b5a16e" stroke-width="1.1" stroke-linecap="round"/>
+            </svg>
+            <span>X / Twitter</span>
+          </a>
+          <a class="social-link social-github" href="https://github.com/talharaziq" target="_blank" rel="noopener noreferrer" aria-label="GitHub, talharaziq" title="GitHub">
+            <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+              <path d="M16 17.5 13 11l8 3.2a19 19 0 0 1 6 0L35 11l-3 6.5c3 2.1 4.5 5 4.5 8.4 0 7-5.2 11.2-12.5 11.2S11.5 33 11.5 26c0-3.5 1.5-6.4 4.5-8.5Z" fill="none" stroke="#858d7b" stroke-width="2.3" stroke-linejoin="round"/>
+              <path d="M18 35c-4 .5-5.2-1.5-6.2-3.6M30 35c4 .5 5.2-1.5 6.2-3.6" fill="none" stroke="#b39c76" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M19 25.5h.1M29 25.5h.1" stroke="#858d7b" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
         </div>
       </div>
-      <div class="hero-scroll">Scroll to explore ↓</div>
-    </section>
 
-    <section class="section wrap" id="work">
-      <div class="section-intro"><div><p class="section-kicker">01 / DIGITAL VENTURES</p><h2 class="section-title">Things I <em>put online.</em></h2></div><p>Three independent websites I founded, built and continue to manage — each with its own audience and purpose.</p></div>
-      <div class="websites">
-        <article class="site-card"><div class="site-visual oops"><div class="browser"><div class="browser-top"><i></i><i></i><i></i><span class="browser-url"></span></div><div class="mock-oops"><div class="mock-brand">OOPSGENE</div><div class="mock-oops-head"><div><h3>Useful information.<br>Clearly explained.</h3><p>Scholarships, student guides and practical resources.</p><span class="mock-button">EXPLORE RESOURCES ↗</span></div><div class="mock-paper"><i></i><i></i><i></i></div></div></div></div></div><div class="site-copy"><div class="site-category">Education · Founder</div><h3>OopsGene</h3><a class="domain" href="https://oopsgene.com" target="_blank" rel="noopener noreferrer">oopsgene.com ↗</a><p>Scholarships, student guides, opportunities and useful learning resources.</p><a class="site-link" href="https://oopsgene.com" target="_blank" rel="noopener noreferrer">Visit website <span>↗</span></a></div></article>
-        <article class="site-card"><div class="site-visual paw"><div class="browser"><div class="browser-top"><i></i><i></i><i></i><span class="browser-url"></span></div><div class="mock-paw"><div class="mock-brand">PAWPAWDECORS</div><h3>Make yourself<br>at home.</h3><p>Thoughtful decor inspiration, garden ideas and plant-care guides.</p><div class="plant"><i></i><i></i><i></i><i></i></div></div></div></div><div class="site-copy"><div class="site-category">Home & garden · Founder</div><h3>PawpawDecors</h3><a class="domain" href="https://pawpawdecors.com" target="_blank" rel="noopener noreferrer">pawpawdecors.com ↗</a><p>Home styling, garden decor and practical plant-care content.</p><a class="site-link" href="https://pawpawdecors.com" target="_blank" rel="noopener noreferrer">Visit website <span>↗</span></a></div></article>
-        <article class="site-card"><div class="site-visual mravenzo"><div class="browser"><div class="browser-top"><i></i><i></i><i></i><span class="browser-url"></span></div><div class="mock-tools"><div class="mock-brand">MRAVENZO / ONLINE TOOLS</div><div class="calcbox"><div class="calc-value">12,450</div><div class="calc-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div><div class="site-copy"><div class="site-category">Digital tools · Founder</div><h3>Mravenzo</h3><a class="domain" href="https://mravenzo.com" target="_blank" rel="noopener noreferrer">mravenzo.com ↗</a><p>Free calculators and browser-based tools for everyday tasks.</p><a class="site-link" href="https://mravenzo.com" target="_blank" rel="noopener noreferrer">Visit website <span>↗</span></a></div></article>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about"><span>01</span> about</a>
+        <a href="#websites"><span>02</span> websites</a>
+        <a href="#projects"><span>03</span> projects</a>
+        <a href="#contact"><span>04</span> say hello</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-wrap" aria-labelledby="hero-title">
+        <div class="hero-visual reveal">
+          <div class="portrait-frame">
+            <span class="frame-index">FIG. 01 / A HUMAN WHO BUILDS</span>
+            <!-- PORTRAIT PLACEHOLDER: replace the SVG below with your own photo when ready. -->
+            <svg class="portrait-drawing" viewBox="0 0 360 430" role="img" aria-label="Editable pencil line drawing used as a temporary portrait placeholder">
+              <defs>
+                <filter id="soft-pencil" x="-10%" y="-10%" width="120%" height="120%">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="4" result="noise"/>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.7"/>
+                </filter>
+              </defs>
+              <path d="M54 386c17-72 57-105 125-105s112 34 128 105" fill="none" stroke="#77766f" stroke-width="2.1" stroke-linecap="round" filter="url(#soft-pencil)"/>
+              <path d="M120 383c12-47 28-73 60-73 33 0 51 26 62 73" fill="none" stroke="#9b9990" stroke-width="1.3" stroke-linecap="round"/>
+              <path d="M133 157c-3-53 23-92 67-94 47-1 68 33 65 91-1 50-24 93-63 94-41 1-67-39-69-91Z" fill="none" stroke="#555650" stroke-width="2.1" stroke-linecap="round"/>
+              <path d="M136 145c-1-47 21-75 64-78 33-2 53 13 64 40-15-6-26-18-31-28-17 20-49 31-95 31" fill="none" stroke="#77766f" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M160 169c6-4 14-4 19 0M218 168c6-4 13-4 19 0" fill="none" stroke="#555650" stroke-width="2" stroke-linecap="round"/>
+              <path d="M167 184h.2M227 184h.2" stroke="#555650" stroke-width="4" stroke-linecap="round"/>
+              <path d="M190 182c-3 15-7 23-4 27 3 3 8 3 13 1M178 230c13 8 28 8 41-1" fill="none" stroke="#77766f" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M151 254c10 20 26 32 47 32 24 0 43-12 54-32M168 248c13 8 30 10 49 2" fill="none" stroke="#77766f" stroke-width="1.25" stroke-linecap="round"/>
+              <path d="M148 318c21 13 42 20 63 20 18 0 36-6 54-18M138 333c18 19 46 30 74 30 27 0 51-10 69-27" fill="none" stroke="#aaa89f" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M98 115c-8 39-8 75 0 105M275 104c12 40 13 82 4 119M113 84c17-26 44-41 78-45M256 72c18 13 29 34 33 58" fill="none" stroke="#bbb9b0" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 6"/>
+              <path d="M72 64l8-15 8 15-8 15-8-15ZM294 274l5-10 5 10-5 10-5-10Z" fill="none" stroke="#9b9a91" stroke-width="1.2"/>
+              <path d="M29 348c9-5 18-5 27 0M304 55c9-5 18-5 27 0" fill="none" stroke="#aaa89f" stroke-width="1.2" stroke-linecap="round"/>
+              <text x="180" y="413" text-anchor="middle" fill="#77766f" font-family="Kalam, cursive" font-size="13">a portrait goes here</text>
+            </svg>
+            <span class="portrait-sticker">hello!</span>
+            <span class="portrait-side-note">BIOLOGY<br>MEETS<br>THE WEB</span>
+          </div>
+          <div class="portrait-caption">
+            <span>01 / 04</span>
+            <span>the person behind the tabs</span>
+            <span class="caption-mark">✳</span>
+          </div>
+        </div>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> BIOTECHNOLOGY GRADUATE <i>·</i> WEB DEVELOPER</p>
+          <p class="hello-line">a little hello from my desk</p>
+          <h1 id="hero-title"><span>Talha</span><span>Raziq<span class="name-period">.</span></span></h1>
+          <svg class="name-underline" viewBox="0 0 450 24" aria-hidden="true"><path d="M4 15c88-9 166-10 257-5 64 3 123 5 184-3M25 20c102-7 227-5 388-6" fill="none" stroke="#85847c" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <p class="hero-tagline">I turn ideas into <em>useful things</em> — from biology and websites to AI-powered workflows.</p>
+          <p class="hero-description">I’m a biotechnology graduate who enjoys building on the web. I develop and manage websites, explore computational biology, and create AI and automation tools such as WhatsApp chatbots.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#projects">see what I make <span>↘</span></a>
+            <a class="text-link" href="mailto:talharaziq@outlook.com">write me a note <span>↗</span></a>
+          </div>
+          <div class="hero-footnote"><span class="tiny-star">✳</span> currently connecting biology, code & everyday problems</div>
+          <div class="margin-note" aria-hidden="true"><span>keep<br>making<br>things</span><svg viewBox="0 0 60 60"><path d="M8 45c11-23 25-29 43-30M36 8l16 7-11 13" fill="none" stroke="#929087" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true">
+        <svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path d="M0 12c85-9 168 7 252 1s150-7 238-1 168 8 249-1 164-5 240 1 139-4 221-3" fill="none" stroke="#b6b4ab" stroke-width="1.2" stroke-linecap="round"/><path d="M0 17c110 4 185-4 284 0 100 4 176 3 268-2 92-4 179 5 274 1s178-4 374 1" fill="none" stroke="#d0cec6" stroke-width=".8" stroke-linecap="round"/></svg>
+        <span>scroll through my notebook</span>
+        <span class="divider-arrow">↓</span>
       </div>
-    </section>
 
-    <section class="section wrap" id="services">
-      <div class="section-intro"><div><p class="section-kicker">02 / WHAT I DO</p><h2 class="section-title">Digital, from <em>idea to launch.</em></h2></div><p>Practical creative and technical work for businesses, brands and online projects.</p></div>
-      <div class="services">
-        <article class="service"><span class="service-no">01</span><div class="service-text"><h3>Websites & management</h3><p>Design, build, updates, content and ongoing site care.</p></div></article>
-        <article class="service"><span class="service-no">02</span><div class="service-text"><h3>Graphic design</h3><p>Posters, promotional graphics and restaurant menus.</p></div></article>
-        <article class="service"><span class="service-no">03</span><div class="service-text"><h3>Automation</h3><p>WhatsApp chatbots and simple workflow automation.</p></div></article>
-        <article class="service"><span class="service-no">04</span><div class="service-text"><h3>Data & Python</h3><p>Data cleaning, analysis, visualisation and machine learning projects.</p></div></article>
-      </div>
-    </section>
+      <section class="about-section section-wrap" id="about" aria-labelledby="about-title">
+        <div class="section-heading reveal">
+          <p class="section-kicker">01 / A FEW THINGS ABOUT ME</p>
+          <h2 id="about-title">A curious mind,<br><span>with a browser open.</span></h2>
+          <p class="section-intro">My work sits between science and the digital world. Some days it’s biological data. Other days it’s a website, a small tool, or an automation that saves someone time.</p>
+        </div>
 
-    <section class="section wrap" id="projects">
-      <div class="section-intro"><div><p class="section-kicker">03 / CODE & DATA</p><h2 class="section-title">Selected <em>projects.</em></h2></div><p>Computational projects using Python to work with biological and biomedical data.</p></div>
-      <div class="projects">
-        <article class="project"><div class="project-label">01 / STRUCTURAL BIOINFORMATICS</div><h3>AMR Structural Mutation Proximity Analysis</h3><p>A Python workflow measuring spatial distances between antimicrobial-resistance mutation pairs using CARD data and UniProt / AlphaFold protein structures.</p><div class="project-stat"><div><strong>112,882</strong><small>Mutation pairs</small></div><div><strong>20.304 Å</strong><small>Observed mean</small></div><div><strong>−2.579 Å</strong><small>Mean difference</small></div></div><div class="project-meta"><div class="project-tags"><span>Python</span><span>Protein structures</span><span>Data analysis</span></div><a href="https://github.com/talharaziq/amr-structural-epistasis" target="_blank" rel="noopener noreferrer">Source ↗</a></div></article>
-        <article class="project"><div class="project-label">02 / SINGLE-CELL TRANSCRIPTOMICS</div><h3>Single-Cell RNA-Seq Pipeline</h3><p>Scanpy and AnnData workflow for around 3,000 PBMCs, including quality control, PCA, Leiden clustering and UMAP visualisation.</p><div class="project-meta"><div class="project-tags"><span>Scanpy</span><span>AnnData</span><span>Python</span></div><a href="https://github.com/talharaziq/scRNAseq-PBMC-Analysis" target="_blank" rel="noopener noreferrer">Source ↗</a></div></article>
-        <article class="project"><div class="project-label">03 / BIOMEDICAL MACHINE LEARNING</div><h3>Breast Cancer Bone Relapse Prediction</h3><p>Compared Logistic Regression, Linear SVM and Random Forest on the GSE2034 gene-expression dataset.</p><div class="project-meta"><div class="project-tags"><span>scikit-learn</span><span>Classification</span></div><a href="https://github.com/talharaziq/breast-cancer-bone-relapse-prediction" target="_blank" rel="noopener noreferrer">Source ↗</a></div></article>
-      </div>
-    </section>
+        <div class="about-lower">
+          <div class="about-note paper-card reveal">
+            <span class="note-pin" aria-hidden="true"></span>
+            <p class="note-label">A NOTE TO SELF</p>
+            <p class="about-quote">“Stay curious.<br>Make it useful.<br>Keep it simple.”</p>
+            <span class="note-signature">— Talha</span>
+          </div>
 
-    <section class="section wrap" id="about">
-      <div class="section-intro"><div><p class="section-kicker">04 / A LITTLE ABOUT ME</p><h2 class="section-title">A science degree.<br><em>A digital mindset.</em></h2></div><p>Biology is my academic foundation. Building for the web and working with data are where most of my current focus sits.</p></div>
-      <div class="science-band"><div><h3>Biotechnology graduate<br>with an interest in bioinformatics.</h3><p>Gomal University · Dera Ismail Khan, Pakistan. Research internship at the National Institute for Genomics and Advanced Biotechnology (NIGAB), NARC, Islamabad, in 2025.</p></div><div class="science-points"><div class="science-point"><strong>Academic background</strong><span>Biotechnology</span></div><div class="science-point"><strong>Research experience</strong><span>NIGAB · 2025</span></div><div class="science-point"><strong>Tools</strong><span>Python · Pandas · NumPy · scikit-learn · Scanpy · Linux</span></div><div class="science-point"><strong>Interest</strong><span>Bioinformatics & computational biology</span></div></div></div>
-      <article class="publication"><div><div class="pub-label">Selected publication · 2025</div><h3>Chloroplast Genetic Engineering in Crop Plants: Techniques and Applications</h3><p>Raziq, T. · International Journal of Agriculture Environment and Food Sciences, 9(Special), 239–246.</p></div><a class="pub-link" href="https://doi.org/10.31015/2025.si.10" target="_blank" rel="noopener noreferrer">Read publication ↗</a></article>
-    </section>
+          <div class="skill-list reveal">
+            <article class="skill-row">
+              <span class="skill-number">01</span>
+              <div><h3>Biotechnology & bioinformatics</h3><p>Biological data, genomics, sequence analysis and computational approaches to life-science questions.</p></div>
+              <span class="skill-symbol symbol-dna" aria-hidden="true">⌁</span>
+            </article>
+            <article class="skill-row">
+              <span class="skill-number">02</span>
+              <div><h3>Web development & site management</h3><p>Building, improving and maintaining useful websites, content systems and browser-based tools.</p></div>
+              <span class="skill-symbol symbol-web" aria-hidden="true">⌘</span>
+            </article>
+            <article class="skill-row">
+              <span class="skill-number">03</span>
+              <div><h3>AI & automation</h3><p>Practical AI workflows, WhatsApp chatbots and automations that connect services and reduce repetitive work.</p></div>
+              <span class="skill-symbol symbol-ai" aria-hidden="true">✳</span>
+            </article>
+          </div>
+        </div>
 
-    <section class="contact wrap" id="contact"><div><h2>HAVE A PROJECT?<br>LET'S MAKE IT REAL.</h2><p>Websites, design, automation or data work — tell me what you have in mind.</p></div><a href="mailto:talharaziq@outlook.com">talharaziq@outlook.com ↗</a></section>
-  </main>
-  <footer class="wrap"><span class="footer-urdu" lang="ur">طلحہ</span><span>© <span id="year">2026</span> Talha Raziq · Made with intent</span><div class="footer-social"><a href="https://www.linkedin.com/in/talharaziq" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://x.com/talha_raziq" target="_blank" rel="noopener noreferrer">X</a><a href="https://www.instagram.com/raayzik/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://github.com/talharaziq" target="_blank" rel="noopener noreferrer">GitHub</a></div></footer>
-  <script>
-    (()=>{
-      const root=document.documentElement,button=document.getElementById('theme-toggle'),icon=document.getElementById('theme-icon');
-      try{const saved=localStorage.getItem('talha-portfolio-theme');if(saved==='dark'||saved==='light')root.dataset.theme=saved}catch(e){}
-      function sync(){const dark=root.dataset.theme==='dark';button.setAttribute('aria-pressed',String(dark));button.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');icon.innerHTML=dark?'<path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5a8.5 8.5 0 1 0 12 12Z"/>':'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>';document.querySelector('meta[name="theme-color"]').content=dark?'#171714':'#f5f1eb'}
-      button.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('talha-portfolio-theme',root.dataset.theme)}catch(e){}sync()});
-      document.getElementById('year').textContent=new Date().getFullYear();sync();
-    })();
-  </script>
+        <div class="tiny-facts reveal">
+          <span><i>studied</i> Biotechnology · Gomal University</span>
+          <span><i>research</i> NIGAB / NARC · 2025</span>
+          <span><i>based in</i> Pakistan</span>
+        </div>
+        <div class="doodle doodle-laptop" aria-hidden="true">
+          <svg viewBox="0 0 160 150">
+            <!-- seated person working at a laptop -->
+            <path d="M65 25c1-12 9-19 20-19 12 0 20 8 19 21-1 11-8 18-19 18-12 0-21-9-20-20Z" fill="none" stroke="#77766f" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M66 23c7-17 26-22 38-8M72 27h.2m23 0h.2M81 37c4 3 8 3 12 0" fill="none" stroke="#8b8981" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M70 48c-12 9-17 21-17 36m43-36c13 7 19 19 20 34M55 67c11 0 20 5 27 13m31-12c-9 0-17 4-24 12" fill="none" stroke="#77766f" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M47 84h69l8 33H38l9-33Z" fill="#eeeeea" stroke="#77766f" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M31 119h100l-6 7H37l-6-7Z" fill="none" stroke="#77766f" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M57 96c7 4 14 5 21 4m27-4c-6 4-13 5-20 4" fill="none" stroke="#aaa89f" stroke-width="1.2" stroke-linecap="round"/>
+            <path d="M17 35l-7-8m118 11 10-9M15 111c5-4 10-5 16-4m99 5c6-4 11-4 17-2" fill="none" stroke="#aaa89f" stroke-width="1.2" stroke-linecap="round"/>
+            <text x="80" y="143" text-anchor="middle" font-family="Kalam,cursive" font-size="11" fill="#8b8981">one tab at a time</text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="websites-section section-wrap" id="websites" aria-labelledby="websites-title">
+        <div class="section-heading section-heading-row reveal">
+          <div>
+            <p class="section-kicker">02 / THE SMALL CORNER OF THE WEB I LOOK AFTER</p>
+            <h2 id="websites-title">Websites I <span>founded & manage.</span></h2>
+          </div>
+          <p class="section-side-note">Three different subjects.<br>One shared love of building things online.</p>
+        </div>
+
+        <div class="website-grid">
+          <article class="website-note website-note-yellow reveal">
+            <span class="paper-tape tape-yellow" aria-hidden="true"></span>
+            <div class="website-note-top"><span>WEB NOTE / 001</span><span class="note-spark">✳</span></div>
+            <div class="site-doodle site-doodle-book" aria-hidden="true">
+              <svg viewBox="0 0 110 82"><path d="M12 16c17-7 31-4 43 5v48c-13-9-27-12-43-5V16Zm86 0c-17-7-31-4-43 5v48c13-9 27-12 43-5V16Z" fill="none" stroke="#77756e" stroke-width="1.7" stroke-linejoin="round"/><path d="M21 28c10-3 19-1 27 4m-27 7c10-3 19-1 27 4m-27 7c10-3 19-1 27 4m14-22c8-5 17-7 27-4m-27 15c8-5 17-7 27-4m-27 15c8-5 17-7 27-4" fill="none" stroke="#aaa69a" stroke-width="1.1" stroke-linecap="round"/></svg>
+            </div>
+            <p class="website-category">EDUCATION · STUDENT RESOURCES</p>
+            <h3>OopsGene</h3>
+            <p class="website-domain">oopsgene.com</p>
+            <p class="website-description">An independent learning hub for scholarships, student guides, useful information and practical resources.</p>
+            <div class="note-bottom"><span>founded & maintained by me</span><a href="https://oopsgene.com/" target="_blank" rel="noopener noreferrer">visit site <b>↗</b></a></div>
+          </article>
+
+          <article class="website-note website-note-grid reveal">
+            <span class="paper-clip" aria-hidden="true"></span>
+            <div class="website-note-top"><span>WEB NOTE / 002</span><span class="note-spark">✳</span></div>
+            <div class="site-doodle site-doodle-calculator" aria-hidden="true">
+              <svg viewBox="0 0 110 82"><rect x="28" y="7" width="54" height="68" rx="5" fill="none" stroke="#77766f" stroke-width="1.8" transform="rotate(-5 55 41)"/><rect x="39" y="17" width="32" height="12" rx="2" fill="none" stroke="#9b9990" stroke-width="1.2" transform="rotate(-5 55 23)"/><g fill="none" stroke="#8e8c83" stroke-width="1.4"><circle cx="42" cy="39" r="3.5"/><circle cx="55" cy="38" r="3.5"/><circle cx="68" cy="37" r="3.5"/><circle cx="43" cy="52" r="3.5"/><circle cx="56" cy="51" r="3.5"/><circle cx="69" cy="50" r="3.5"/></g><path d="m12 24 7-8 7 8M89 58l7 6-7 7" fill="none" stroke="#b99d79" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </div>
+            <p class="website-category">TOOLS · CALCULATORS</p>
+            <h3>Mravenzo</h3>
+            <p class="website-domain">mravenzo.com</p>
+            <p class="website-description">A growing collection of free online calculators for everyday maths, dates, finance, health, home and more.</p>
+            <div class="note-bottom"><span>founded & maintained by me</span><a href="https://mravenzo.com/" target="_blank" rel="noopener noreferrer">visit site <b>↗</b></a></div>
+          </article>
+
+          <article class="website-note website-note-pink reveal">
+            <span class="paper-tape tape-pink" aria-hidden="true"></span>
+            <div class="website-note-top"><span>WEB NOTE / 003</span><span class="note-spark">✳</span></div>
+            <div class="site-doodle site-doodle-leaf" aria-hidden="true">
+              <svg viewBox="0 0 110 82"><path d="M53 70c-2-21 1-43 5-60M56 44c-21 1-30-9-30-23 18-3 30 5 30 23Zm2-12c3-19 17-26 32-24 0 17-10 27-32 24Zm-4 28c-16 1-24-5-26-17 15-4 25 2 26 17Zm9-9c3-14 13-19 26-17-2 14-11 20-26 17Z" fill="none" stroke="#7f8e79" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 72c12-5 23-5 34-2m31 2c9-4 18-4 27-1" fill="none" stroke="#b4a69a" stroke-width="1.1" stroke-linecap="round"/></svg>
+            </div>
+            <p class="website-category">HOME · GARDEN · PLANT CARE</p>
+            <h3>PawPawDecors</h3>
+            <p class="website-domain">pawpawdecors.com</p>
+            <p class="website-description">A home-and-garden journal with decor inspiration, garden ideas and friendly plant-care guides.</p>
+            <div class="note-bottom"><span>founded & maintained by me</span><a href="https://pawpawdecors.com/" target="_blank" rel="noopener noreferrer">visit site <b>↗</b></a></div>
+          </article>
+        </div>
+        <p class="section-footnote"><span>✎</span> each website has its own audience, purpose and little set of problems to solve.</p>
+      </section>
+
+      <section class="projects-section section-wrap" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading section-heading-row reveal">
+          <div>
+            <p class="section-kicker">03 / REPOSITORY SKETCHES</p>
+            <h2 id="projects-title">Things I’ve <span>been building.</span></h2>
+          </div>
+          <a class="text-link github-more" href="https://github.com/talharaziq?tab=repositories" target="_blank" rel="noopener noreferrer">browse all repositories <span>↗</span></a>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-roadmap reveal">
+            <div class="project-art project-art-book" aria-hidden="true">
+              <span class="project-number">01</span>
+              <svg viewBox="0 0 280 160">
+                <path d="M43 36c36-14 66-7 97 13v82c-31-20-61-27-97-13V36Zm194 0c-36-14-66-7-97 13v82c31-20 61-27 97-13V36Z" fill="none" stroke="#6f7069" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M56 56c24-8 44-5 66 8m-66 8c24-8 44-5 66 8m-66 8c24-8 44-5 66 8m-66 8c24-8 44-5 66 8m42-40c22-13 42-16 66-8m-66 24c22-13 42-16 66-8m-66 24c22-13 42-16 66-8" fill="none" stroke="#a49f92" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M140 50v80M24 24l-7-10m238 11 9-10M21 138l-7 9m245-9 8 9" fill="none" stroke="#b7a17e" stroke-width="1.5" stroke-linecap="round"/>
+                <text x="140" y="20" text-anchor="middle" fill="#77766f" font-family="Kalam,cursive" font-size="12">learn · practise · repeat</text>
+              </svg>
+              <span class="art-caption">a map for curious minds</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type">OPEN LEARNING RESOURCE</p>
+              <h3>Advanced Bioinformatics</h3>
+              <p>A hands-on roadmap through Linux, Python, R, genomics, RNA-seq, Bioconductor and transcriptomics, with tutorials and practical learning resources.</p>
+              <div class="project-tags"><span>bioinformatics</span><span>Python</span><span>R</span><span>RNA-seq</span></div>
+              <div class="project-bottom"><span class="repo-signal">99 <i>★</i> &nbsp;·&nbsp; 28 forks</span><a href="https://github.com/talharaziq/Advanced-Bioinformatics" target="_blank" rel="noopener noreferrer">open repository ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project-card project-singlecell reveal">
+            <div class="project-art project-art-cells" aria-hidden="true">
+              <span class="project-number">02</span>
+              <svg viewBox="0 0 280 160">
+                <path d="M30 126h220M43 19v107" fill="none" stroke="#9d9b91" stroke-width="1.2" stroke-linecap="round"/>
+                <g fill="none" stroke-width="1.3">
+                  <circle cx="75" cy="91" r="14" stroke="#9b9fb0"/><circle cx="105" cy="75" r="10" stroke="#9b9fb0"/><circle cx="89" cy="111" r="7" stroke="#b6a0a0"/><circle cx="132" cy="58" r="12" stroke="#829d92"/><circle cx="149" cy="92" r="16" stroke="#829d92"/><circle cx="176" cy="45" r="8" stroke="#b7a07f"/><circle cx="198" cy="71" r="13" stroke="#b7a07f"/><circle cx="217" cy="104" r="9" stroke="#a99aae"/><circle cx="177" cy="119" r="6" stroke="#a99aae"/><circle cx="121" cy="119" r="5" stroke="#b6a0a0"/>
+                </g>
+                <g fill="#aaa69b"><circle cx="75" cy="91" r="2.2"/><circle cx="105" cy="75" r="2"/><circle cx="132" cy="58" r="2.5"/><circle cx="149" cy="92" r="2.2"/><circle cx="176" cy="45" r="2"/><circle cx="198" cy="71" r="2.3"/><circle cx="217" cy="104" r="2"/></g>
+                <path d="M62 35c31-15 63-19 97-10m27 7 24-6" fill="none" stroke="#aaa69f" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="3 5"/>
+                <text x="240" y="20" text-anchor="end" fill="#7b7b73" font-family="Kalam,cursive" font-size="11">UMAP / PBMC</text>
+              </svg>
+              <span class="art-caption">cells, clusters & patterns</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type">SINGLE-CELL TRANSCRIPTOMICS</p>
+              <h3>Single-cell RNA-seq</h3>
+              <p>A free single-cell RNA-seq learning and workflow resource. A companion <a class="inline-project-link" href="https://github.com/talharaziq/scRNAseq-PBMC-Analysis" target="_blank" rel="noopener noreferrer">PBMC analysis notebook</a> uses Scanpy to process around 2,700 cells and identify major immune populations.</p>
+              <div class="project-tags"><span>Scanpy</span><span>AnnData</span><span>Python</span><span>scRNA-seq</span></div>
+              <div class="project-bottom"><span class="repo-signal">19 <i>★</i> &nbsp;·&nbsp; 7 forks</span><a href="https://github.com/talharaziq/scRNA" target="_blank" rel="noopener noreferrer">open repository ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project-card project-amr reveal">
+            <div class="project-art project-art-protein" aria-hidden="true">
+              <span class="project-number">03</span>
+              <svg viewBox="0 0 280 160">
+                <path d="M26 91c18-41 29 26 49-8s27-34 42-4 30 41 45 3 28-36 43-8 28 15 49-20" fill="none" stroke="#8f9b93" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27 91c20-34 32 22 50-6s26-25 40 0 31 33 45 0 27-28 44-4 28 12 47-16" fill="none" stroke="#c0a18b" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+                <g fill="#efeee8" stroke="#77786f" stroke-width="1.5"><circle cx="27" cy="91" r="7"/><circle cx="75" cy="83" r="7"/><circle cx="117" cy="79" r="7"/><circle cx="162" cy="82" r="7"/><circle cx="205" cy="74" r="7"/><circle cx="254" cy="54" r="7"/></g>
+                <path d="M74 83 117 79 162 82 205 74" fill="none" stroke="#99978f" stroke-width="1" stroke-dasharray="3 4"/>
+                <path d="M115 111v15m-5-5 5 5 5-5M204 103v23m-5-5 5 5 5-5" fill="none" stroke="#b0937e" stroke-width="1.2" stroke-linecap="round"/>
+                <text x="140" y="23" text-anchor="middle" fill="#77766f" font-family="Kalam,cursive" font-size="12">mutation proximity</text>
+              </svg>
+              <span class="art-caption">protein structure / distance</span>
+            </div>
+            <div class="project-content">
+              <p class="project-type">STRUCTURAL BIOINFORMATICS</p>
+              <h3>AMR mutation proximity</h3>
+              <p>A Python workflow comparing the 3D proximity of antimicrobial-resistance mutation pairs in protein structures against matched controls.</p>
+              <div class="project-tags"><span>Python</span><span>CARD</span><span>UniProt</span><span>AlphaFold</span></div>
+              <div class="project-bottom"><span class="repo-signal">112,882 <i>pairs analysed</i></span><a href="https://github.com/talharaziq/amr-structural-epistasis" target="_blank" rel="noopener noreferrer">open repository ↗</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="project-disclaimer">Selected from my public GitHub work. Repository activity and details can change as I keep building.</p>
+        <div class="doodle doodle-reader" aria-hidden="true">
+          <svg viewBox="0 0 150 160">
+            <path d="M62 40c2-17 31-19 37-2 7 20-1 33-17 35-14 2-22-13-20-33Z" fill="none" stroke="#73736c" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M60 45c7-17 26-24 40-11M67 81c-16 12-24 30-23 50m42-56c18 8 28 23 32 43M47 130c26 7 47 8 71 0" fill="none" stroke="#73736c" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M45 99c13-13 27-15 41-6l-5 23c-16-6-27-5-40 2l4-19Zm41-6c14-9 29-7 41 7l-3 19c-13-7-25-7-42-3l4-23Z" fill="none" stroke="#aaa69d" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M16 53l8-12 8 12-8 12-8-12ZM111 23l5-10 5 10-5 10-5-10Z" fill="none" stroke="#b6a07f" stroke-width="1.2"/>
+            <text x="74" y="151" text-anchor="middle" fill="#87857d" font-family="Kalam,cursive" font-size="11">one more page</text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="contact-section section-wrap" id="contact" aria-labelledby="contact-title">
+        <div class="contact-paper reveal">
+          <div class="contact-topline"><span>04 / OPEN INVITATION</span><span>NO FORMALITY NEEDED</span></div>
+          <div class="contact-body">
+            <div class="contact-copy">
+              <p class="section-kicker">HAVE A THOUGHT, A PROJECT OR A QUESTION?</p>
+              <h2 id="contact-title">Let’s make<br><span>something useful.</span></h2>
+              <p>For web projects, website work, AI automation, or conversations about biology and data, send me a note.</p>
+              <div class="contact-actions">
+                <a class="button button-dark" href="mailto:talharaziq@outlook.com">email Talha <span>↗</span></a>
+                <button class="copy-email" type="button" data-copy-email="talharaziq@outlook.com">copy email address <span>⎘</span></button>
+              </div>
+              <p class="contact-address">talharaziq@outlook.com</p>
+            </div>
+            <div class="contact-doodle" aria-hidden="true">
+              <svg viewBox="0 0 260 280">
+                <path d="M96 68c1-28 17-45 42-44 25 0 40 20 38 47-1 27-16 46-39 46-24 0-42-20-41-49Z" fill="none" stroke="#696a63" stroke-width="2" stroke-linecap="round"/>
+                <path d="M97 67c10-31 42-43 68-28M113 76c5-3 10-3 14 0m26 0c5-3 10-3 14 0M128 93c7 5 15 5 22 0" fill="none" stroke="#77776f" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M108 119c-32 15-47 38-48 75l-8 53m119-127c28 16 44 41 45 76l8 51M84 167c29 19 69 23 105 1M78 205c40 17 82 18 121 0" fill="none" stroke="#77776f" stroke-width="2" stroke-linecap="round"/>
+                <path d="M49 226c-3 14-2 24 1 34m173-32c2 11 1 22-2 32" fill="none" stroke="#a19e94" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M186 142c15-5 22-2 29 7l-5 7-22-2M202 152l-19 44m24-37 10 38" fill="none" stroke="#77776f" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M223 64c-5-10-3-18 6-24m-7 24c10-4 18-2 24 6M37 65l7-13 7 13-7 13-7-13Z" fill="none" stroke="#b39b77" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M63 262c48 8 89 8 137-1" fill="none" stroke="#b8b4aa" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 5"/>
+                <text x="131" y="276" text-anchor="middle" fill="#88867d" font-family="Kalam,cursive" font-size="12">talk soon?</text>
+              </svg>
+            </div>
+          </div>
+          <div class="contact-bottom"><span>DRAWN WITH A PENCIL, BUILT WITH CODE</span><span class="contact-spark">✳</span><span>THANKS FOR STOPPING BY</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-mark" href="#top">tr<span>.</span></a>
+      <p>made slowly, with care <span>·</span> Talha Raziq <span>·</span> <span id="year">2026</span></p>
+      <a href="#top" class="back-top">back to the top ↑</a>
+    </footer>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="script.js"></script>
 </body>
 </html>
